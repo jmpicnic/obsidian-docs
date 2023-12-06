@@ -54,7 +54,7 @@ jobs:
           echo "ACT (LOCAL RUN) = ${{ env.ACT }}"
           echo "RUN THE GRAPH GENERATOR = $RUN_GRAPH"
   build-docs:
-    name: Deploy with mkdocs
+    name: Build with mkdocs
     runs-on: ubuntu-latest
     needs: check-env
     steps:
