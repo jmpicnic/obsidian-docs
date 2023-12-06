@@ -1,0 +1,29 @@
+{
+  "database": "Zotero",
+  "noteImportFolder": "References",
+  "pdfExportImageDPI": 120,
+  "pdfExportImageFormat": "png",
+  "pdfExportImageQuality": 90,
+  "citeFormats": [
+    {
+      "name": "Bibliography",
+      "format": "formatted-citation",
+      "cslStyle": "ieee-with-url"
+    }
+  ],
+  "exportFormats": [
+    {
+      "name": "Create Reference Note",
+      "outputPathTemplate": "bibliography/{{citekey}}.md",
+      "imageOutputPathTemplate": "assets/bibliography/{{citekey}}/",
+      "imageBaseNameTemplate": "image",
+      "templatePath": "Templates/Reference Note.md",
+      "cslStyle": "ieee-with-url"
+    }
+  ],
+  "citeSuggestTemplate": "[[{{citekey}}]]",
+  "openNoteAfterImport": true,
+  "whichNotesToOpenAfterImport": "last-imported-note",
+  "pdfExportImageTesseractPath": "/opt/homebrew/bin/tesseract",
+  "pdfExportImageOCR": true
+}

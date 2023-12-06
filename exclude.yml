@@ -1,9 +1,11 @@
 folder:
   - _Archive
-  - Ressource
+  - Resource
 files:
   - index
   - CNAME
   - README
   - tag
   - tags
+  - LICENSE
+

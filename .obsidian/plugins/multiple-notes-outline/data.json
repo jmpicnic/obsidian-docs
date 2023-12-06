@@ -1,0 +1,120 @@
+{
+  "autoupdateFileView": true,
+  "suspendUpdateByClickingView": true,
+  "autoupdateFolderView": false,
+  "showFiles": {
+    "main": true,
+    "outgoing": true,
+    "backlink": true
+  },
+  "showElements": {
+    "heading": true,
+    "link": true,
+    "tag": true,
+    "listItems": true
+  },
+  "headingLevel": [
+    true,
+    true,
+    true,
+    true,
+    false,
+    false
+  ],
+  "hideLinksBetweenRelatedFiles": "none",
+  "allRootItems": false,
+  "allTasks": true,
+  "taskOnly": false,
+  "hideCompletedTasks": false,
+  "displayFileInfo": "lines",
+  "viewPosition": "right",
+  "wordsToIgnore": {
+    "heading": [],
+    "link": [],
+    "tag": [],
+    "listItems": []
+  },
+  "inlinePreview": true,
+  "tooltipPreview": true,
+  "tooltipPreviewDirection": "left",
+  "includeOnly": "none",
+  "wordsToInclude": [],
+  "includeBeginning": true,
+  "primeElement": "none",
+  "wordsToExclude": {
+    "heading": [],
+    "link": [],
+    "tag": [],
+    "listItems": []
+  },
+  "wordsToExtract": "",
+  "icon": {
+    "heading": "none",
+    "link": "link",
+    "tag": "tag",
+    "listItems": "list",
+    "note": "file",
+    "task": "square",
+    "taskDone": "check-square"
+  },
+  "customIcon": {
+    "heading": "hash",
+    "link": "link",
+    "tag": "tag",
+    "listItems": "list",
+    "note": "file",
+    "task": "square",
+    "taskDone": "check-square"
+  },
+  "indent": {
+    "heading": true,
+    "link": true,
+    "tag": true,
+    "listItems": true
+  },
+  "indentFollowHeading": 2,
+  "prefix": {
+    "heading": "",
+    "link": "",
+    "tag": "",
+    "listItems": "",
+    "task": "",
+    "taskDone": ""
+  },
+  "repeatHeadingPrefix": "none",
+  "addCheckboxText": false,
+  "hideDuplicated": true,
+  "readLimit": 50,
+  "processLimit": 100,
+  "noteTitleBackgroundColor": "accent",
+  "customNoteTitleBackgroundColor": {
+    "light": "#BEBEBE",
+    "dark": "#4E4E4E"
+  },
+  "customNoteTitleBackgroundColorHover": {
+    "light": "#AEAEAE",
+    "dark": "#5E5E5E"
+  },
+  "tagsAOT": [],
+  "showBacklinks": true,
+  "relatedFiles": {},
+  "openAtStartup": {
+    "file": false,
+    "folder": false
+  },
+  "collapseFolder": true,
+  "sortType": "alphabetAscending",
+  "showDebugInfo": false,
+  "collapseAllAtStartup": false,
+  "showPropertyLinks": true,
+  "recent": {
+    "file": [],
+    "folder": []
+  },
+  "favorite": {
+    "file": [],
+    "folder": []
+  },
+  "numOfRecentFiles": 30,
+  "pinAfterJump": true
+}

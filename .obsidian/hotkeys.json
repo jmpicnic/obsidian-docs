@@ -1,0 +1,52 @@
+{
+  "emacs-text-editor:kill-line": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "K"
+    }
+  ],
+  "emacs-text-editor:kill-region": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "W"
+    }
+  ],
+  "longform:longform-jump-to-project": [
+    {
+      "modifiers": [
+        "Ctrl",
+        "Shift"
+      ],
+      "key": "O"
+    }
+  ],
+  "emacs-text-editor:undo": [
+    {
+      "modifiers": [
+        "Ctrl",
+        "Shift"
+      ],
+      "key": "-"
+    }
+  ],
+  "emacs-text-editor:recenter-top-bottom": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "L"
+    }
+  ],
+  "emacs-text-editor:yank": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "Y"
+    }
+  ]
+}
