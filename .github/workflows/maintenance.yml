@@ -12,3 +12,5 @@ jobs:
       DRY_RUN: false
     secrets:
       GH_PAT: ${{ secrets.GITHUB_TOKEN }}
+      AUTHOR_NAME: ${{ vars.AUTHOR_NAME }}
+      AUTHOR_EMAIL: ${{ vars.AUTHOR_EMAIL }}

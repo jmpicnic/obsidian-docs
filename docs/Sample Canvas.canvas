@@ -1,0 +1,7 @@
+{
+	"nodes":[
+		{"id":"361ff0c60dd579b5","x":-800,"y":-340,"width":400,"height":400,"type":"file","file":"docs/notes/A note to test.md"},
+		{"id":"e57ee21c3b324b3a","x":120,"y":60,"width":250,"height":60,"color":"2","type":"text","text":"A Little Local Card"}
+	],
+	"edges":[]
+}

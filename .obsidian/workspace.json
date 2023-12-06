@@ -1,0 +1,255 @@
+{
+  "main": {
+    "id": "362223553724929a",
+    "type": "split",
+    "children": [
+      {
+        "id": "6998dbec9fc54b36",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "710b0c75464e800d",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/Projects/impractical Architecture/The Information Model/Take Aways.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "1db664ec0b263ff5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f67b9e9a63bf9908",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/Projects/impractical Architecture/The Information Model/Building an Information Model.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7f242122c270e4f9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Templates/Copyright.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e9ee44874a6750f9",
+    "type": "split",
+    "children": [
+      {
+        "id": "055acc118d49a917",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fa361f7b939547ef",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "6986c0ef9bf1d71d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#programming",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b5e8d6d34ae707ac",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
+            "id": "105f7d44e23ecc29",
+            "type": "leaf",
+            "state": {
+              "type": "VIEW_TYPE_LONGFORM_EXPLORER",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 704.5
+  },
+  "right": {
+    "id": "86ec885e4265b9f6",
+    "type": "split",
+    "children": [
+      {
+        "id": "f741df8befa17864",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fb99dc45eaf17fa8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Templates/Copyright.md",
+                "collapseAll": true,
+                "extraContext": true,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "399cc21e21a9a7ee",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Templates/Copyright.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c0d859ef21f2e98b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "6f46e1323a6cd4ba",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Templates/Copyright.md"
+              }
+            }
+          },
+          {
+            "id": "435b8f28353bb7c5",
+            "type": "leaf",
+            "state": {
+              "type": "ReferenceListView",
+              "state": {}
+            }
+          },
+          {
+            "id": "0560a18c5f81febd",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          },
+          {
+            "id": "21b54b8635743a59",
+            "type": "leaf",
+            "state": {
+              "type": "multiple-notes-outline-folder-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 6
+      }
+    ],
+    "direction": "horizontal",
+    "width": 445.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "fa361f7b939547ef",
+  "lastOpenFiles": [
+    "docs/Projects/impractical Architecture/Impractical Architecture manuscript.md",
+    "docs/Projects/impractical Architecture/Impractical Architecture manuscript.html",
+    "docs/impractical Architecture/The Information Model/Impractical Architecture $2 manuscript.md",
+    "docs/Projects/impractical Architecture/The Information Model/Building an Information Model.md",
+    "docs/Projects/impractical Architecture/The Information Model/Software Models.md",
+    "docs/Projects/impractical Architecture/The Information Model/Describing System State.md",
+    "docs/Projects/impractical Architecture/The Information Model/The Information Model.md",
+    "docs/Projects/impractical Architecture/The Information Model/Take Aways.md",
+    "scripts",
+    "docs/Projects/impractical Architecture/The Information Model/References.md",
+    "docs/impractical Architecture/Overview/ssss/Aasdf0-00.md",
+    "docs/impractical Architecture/Overview/ssss",
+    "docs/Projects/Supply Chain Information Structure/Overview/The Movement Layer.md",
+    "docs/Projects/Supply Chain Information Structure/Overview/Overview.md",
+    "docs/Projects/Supply Chain Information Structure/Overview/Index.md",
+    "docs/Projects/impractical Architecture/The Information Model/Index.md",
+    "docs/Projects/impractical Architecture/Overview/Index.md",
+    "docs/Projects/impractical Architecture/Overview/Overview.md",
+    "Templates/Note Template.md",
+    "Templates/Copyright.md",
+    "docs/notes/bib index.md",
+    "docs/Projects/Supply Chain Information Structure/Overview/Overview.html",
+    "docs/Projects/Supply Chain Information Structure/Overview/Overview.md~",
+    "docs/Projects/Supply Chain Information Structure/Overview/#Overview.md#",
+    "docs/Projects/Supply Chain Information Structure/Overview",
+    "docs/Projects",
+    "docs/Projects/Supply Chain Information Structure",
+    "#longform-sessions.json#",
+    "docs/impractical Architecture/Impractical Architecture/Impractical Architecture.md",
+    "docs/impractical Architecture/Impractical Architecture/Index.md",
+    "docs/Projects/impractical Architecture/The Information Model/The Rest.md",
+    "docs/impractical Architecture/info-model-v1.md",
+    "bibliography/NAUR_1985.md",
+    "Templates/Reference Note.md",
+    "docs/Sample Canvas.canvas",
+    "docs/impractical Architecture/Impractical Architecture/The Information Model/Outline.canvas"
+  ]
+}
