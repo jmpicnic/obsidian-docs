@@ -12,12 +12,8 @@
             "type": "leaf",
             "pinned": true,
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/Projects/impractical Architecture/The Information Model/Take Aways.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "pinned": true
             }
           }
@@ -31,28 +27,11 @@
             "id": "f67b9e9a63bf9908",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/Projects/impractical Architecture/The Information Model/Building an Information Model.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7f242122c270e4f9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Templates/Copyright.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -126,7 +105,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Templates/Copyright.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -143,7 +121,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Templates/Copyright.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -165,9 +142,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Templates/Copyright.md"
-              }
+              "state": {}
             }
           },
           {
@@ -213,43 +188,46 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "fa361f7b939547ef",
+  "active": "f67b9e9a63bf9908",
   "lastOpenFiles": [
-    "docs/Projects/impractical Architecture/Impractical Architecture manuscript.md",
-    "docs/Projects/impractical Architecture/Impractical Architecture manuscript.html",
-    "docs/impractical Architecture/The Information Model/Impractical Architecture $2 manuscript.md",
-    "docs/Projects/impractical Architecture/The Information Model/Building an Information Model.md",
-    "docs/Projects/impractical Architecture/The Information Model/Software Models.md",
-    "docs/Projects/impractical Architecture/The Information Model/Describing System State.md",
+    "mkdocs.yml",
+    "mkdocs_local.yml",
+    "lib",
+    "lib/vis-9.1.2/vis-network.min.js",
+    "lib/vis-9.1.2/vis-network.css",
+    "lib/bindings/utils.js",
+    "lib/vis-9.1.2",
+    "lib/bindings",
+    "lib/tom-select/tom-select.css",
+    "lib/tom-select/tom-select.complete.min.js",
+    "lib/tom-select",
+    "docs/assets/meta/favicons.png",
+    "docs/notes/bib index.md",
+    "docs/notes/A note to test.md",
+    "docs/Sample Canvas.canvas",
     "docs/Projects/impractical Architecture/The Information Model/The Information Model.md",
+    "docs/Projects/impractical Architecture/The Information Model/The Rest.md",
     "docs/Projects/impractical Architecture/The Information Model/Take Aways.md",
-    "scripts",
+    "docs/Projects/impractical Architecture/The Information Model/Software Models.md",
     "docs/Projects/impractical Architecture/The Information Model/References.md",
-    "docs/impractical Architecture/Overview/ssss/Aasdf0-00.md",
-    "docs/impractical Architecture/Overview/ssss",
+    "docs/Projects/impractical Architecture/The Information Model/Index.md",
+    "docs/Projects/impractical Architecture/The Information Model/Describing System State.md",
+    "docs/Projects/impractical Architecture/The Information Model/Building an Information Model.md",
+    "docs/Projects/impractical Architecture/Overview/Overview.md",
+    "docs/Projects/impractical Architecture/Overview/Index.md",
     "docs/Projects/Supply Chain Information Structure/Overview/The Movement Layer.md",
     "docs/Projects/Supply Chain Information Structure/Overview/Overview.md",
     "docs/Projects/Supply Chain Information Structure/Overview/Index.md",
-    "docs/Projects/impractical Architecture/The Information Model/Index.md",
-    "docs/Projects/impractical Architecture/Overview/Index.md",
-    "docs/Projects/impractical Architecture/Overview/Overview.md",
-    "Templates/Note Template.md",
-    "Templates/Copyright.md",
-    "docs/notes/bib index.md",
-    "docs/Projects/Supply Chain Information Structure/Overview/Overview.html",
-    "docs/Projects/Supply Chain Information Structure/Overview/Overview.md~",
-    "docs/Projects/Supply Chain Information Structure/Overview/#Overview.md#",
-    "docs/Projects/Supply Chain Information Structure/Overview",
-    "docs/Projects",
-    "docs/Projects/Supply Chain Information Structure",
-    "#longform-sessions.json#",
-    "docs/impractical Architecture/Impractical Architecture/Impractical Architecture.md",
-    "docs/impractical Architecture/Impractical Architecture/Index.md",
-    "docs/Projects/impractical Architecture/The Information Model/The Rest.md",
-    "docs/impractical Architecture/info-model-v1.md",
+    "docs/Projects/impractical Architecture/Impractical Architecture manuscript.md",
+    "docs/Projects/MiscArticles/ERPs cannot handle Supply Chains.md",
     "bibliography/NAUR_1985.md",
     "Templates/Reference Note.md",
-    "docs/Sample Canvas.canvas",
+    "Templates/Note Template.md",
+    "Templates/Copyright.md",
+    "docs/impractical Architecture/The Information Model/Impractical Architecture $2 manuscript.md",
+    "docs/impractical Architecture/Overview/ssss/Aasdf0-00.md",
+    "docs/impractical Architecture/Impractical Architecture/Impractical Architecture.md",
+    "docs/impractical Architecture/Impractical Architecture/Index.md",
     "docs/impractical Architecture/Impractical Architecture/The Information Model/Outline.canvas"
   ]
 }

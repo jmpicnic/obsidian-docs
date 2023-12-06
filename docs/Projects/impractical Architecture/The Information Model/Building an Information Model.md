@@ -1,5 +1,5 @@
 ---
-title: Impractical Architecture - Software Models of State
+title: Building an Information Model
 author: Miguel Pinilla
 Copyright: (c) Miguel Pinilla, All rights reserved
 License: "This work is licensed under the Creative Commons License CC BY-NC-SA 4.0: https://creativecommons.org/licenses/by-nc-sa/4.0/"
@@ -9,6 +9,7 @@ share: "true"
 ## The Conceptual Model
 
 The first step in building the information model for a system is to capture the concepts and relationships of the domain that the system will support. This requires collecting information, organizing them in a cohesive structure and document that structure to ensure that the different pieces fit together and to support future uses and team members.
+
 ### Collect Information
 
 There are no magic shortcut to create the information model for a system, or modify an information model that already exists. It relies on a deep understanding of the domain and the requirements of the system. The sources to achieve this should not be a surprise to any practitioner:

@@ -1,5 +1,5 @@
 ---
-title: Impractical Architecture - Software Models of State
+title: Software Models of State
 author: Miguel Pinilla
 Copyright: (c) Miguel Pinilla, All rights reserved
 License: "This work is licensed under the Creative Commons License CC BY-NC-SA 4.0: https://creativecommons.org/licenses/by-nc-sa/4.0/"
@@ -77,14 +77,16 @@ Class Diagrams describe a fairly standard Object Oriented model with some intere
 
 ```plantuml
 @startuml
+title
+Class Diagram Elements
+end title
 
 class AClass<GENERIC_PARAMETER><<With Stereotype>> {
  + aPublicProperty: OfType
  # aProtectedProperty: OfType
- - aPrivateProperty: OfType
+ aPrivateProperty: OfType
  + anOperation(withArgument: OfType): OfType
 }
-
 class ASuperClass
 interface AnInterface
 
