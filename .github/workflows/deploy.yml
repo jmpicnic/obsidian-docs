@@ -71,7 +71,7 @@ jobs:
         with:
           distribution: corretto
           java-version: '21'
-      - name: get the latest plantuml
+      - name: Get the latest plantuml
         run: |
           wget -q https://github.com/plantuml/plantuml/releases/download/v1.2023.12/plantuml-1.2023.12.jar
           mv plantuml-1.2023.12.jar plantuml.jar
@@ -88,6 +88,14 @@ jobs:
           cache-dependency-path: requirements.txt
       - name: Install Python packages
         run: pip install -r requirements.txt
+      - name: Run mkdocs
+        run: |
+          mkdocs build -s -f mkdocs.yml
+      - name: Fix permissions
+        run: |
+          chmod -c -R +rX "site/" | while read line; do
+            echo "::warning title=Invalid file permissions automatically fixed::$line"
+          done      
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v2 
         with:
