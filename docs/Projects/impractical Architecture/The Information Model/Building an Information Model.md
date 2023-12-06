@@ -38,8 +38,8 @@ Documenting the results of the information model achieves two critical purposes.
 The level of detail of the documentation will depend on the size and maturity of the team/organization, the complexity of the domain and also external requirements for regulated fields (e.g. requirements of design auditability in health care, energy or defense domains). Each organization needs to decide what level is the right one for them. The three essential types of documents to consider are:
 
 1. A Glossary/Dictionary of all the concepts (nouns and verbs) identified, ideally with references to sources and examples of use.
-2. A set of [class diagrams](Software%20Models.md#Class%20Models) class diagrams and associated descriptions for the main concepts. Diagrams should be centered around connected [classification hierarchies](Describing%20System%20State.md#Categorization%20and%20Classification). The level of detail and formalism may vary from simply providing the name of the class/interface to an almost programming language complete definition of a class (minus implementation)
-3. [State Charts](Software%20Models.md#State%20Charts) for the central classes that govern the behavior of the system.
+2. A set of [class diagrams](./Software Models.md#Class-Models) class diagrams and associated descriptions for the main concepts. Diagrams should be centered around connected [classification hierarchies](Describing System State.md#Categorization and Classification). The level of detail and formalism may vary from simply providing the name of the class/interface to an almost programming language complete definition of a class (minus implementation)
+3. [State Charts](Software Models.md#State Charts) for the central classes that govern the behavior of the system.
 
 ## Introduce Storage Considerations
 
