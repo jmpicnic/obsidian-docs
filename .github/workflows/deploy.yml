@@ -60,46 +60,19 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: Install Ubuntu Packages
-        uses: awalsh128/cache-apt-pkgs-action@latest
+      - name: Build Documents
+        id: build-docs
+        uses: jmpicnic/actions-gen-mkdocs@v1
         with:
-          version: 1.0
-          packages: graphviz texlive pandoc ghostscript tree
-          # execute_install_scripts: true
-      - name: Install Java
-        uses: actions/setup-java@v3
-        with:
-          distribution: corretto
-          java-version: '21'
-      - name: Get the latest plantuml
-        run: |
-          wget -q https://github.com/plantuml/plantuml/releases/download/v1.2023.12/plantuml-1.2023.12.jar
-          mv plantuml-1.2023.12.jar plantuml.jar
-      - name: Check dot installation
-        run: |
-          which dot
-          sudo dot -c
-          java -Djava.awt.headless=true -jar plantuml.jar -testdot
-      - name: Install Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
-          cache: pip
-          cache-dependency-path: requirements.txt
-      - name: Install Python packages
-        run: pip install -r requirements.txt
-      - name: Run mkdocs
-        run: |
-          mkdocs build -s -f mkdocs.yml
-      - name: Fix permissions
-        run: |
-          chmod -c -R +rX "site/" | while read line; do
-            echo "::warning title=Invalid file permissions automatically fixed::$line"
-          done      
+          docs-dir: .
+          site-target-dir: site
+          requirements-file-name: requirements.txt
+          mkdocs-file-name: mkdocs.yml
+          for-techdocs: False
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v2 
         with:
-          path: site   
+          path: ${{ steps.build-docs.outputs.generated-site }}
   deploy:
     # Add a dependency to the upload job
     needs: build-docs
