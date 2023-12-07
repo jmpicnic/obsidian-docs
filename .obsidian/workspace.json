@@ -190,17 +190,17 @@
   },
   "active": "f67b9e9a63bf9908",
   "lastOpenFiles": [
+    "lib",
+    "docs/index.md",
+    "lib/vis-9.1.2",
+    "lib/bindings/utils.js",
+    "lib/bindings",
     "site/search/search_index.json",
     "site/assets/javascripts/decrypt-contents.js",
     "site/assets/javascripts/glightbox.min.js",
     "site/assets/stylesheets/glightbox.min.css",
     "site/notes/bib index/index.html",
     "site/notes/A note to test/index.html",
-    "site/notes/bib index",
-    "site/notes/A note to test",
-    "site/notes",
-    "site/Projects/impractical Architecture/The Information Model/The Rest/index.html",
-    "site/Projects/impractical Architecture/The Information Model/The Rest",
     "site/assets/meta/favicons.png",
     "site/assets/images/favicon.png",
     "site/Sample Canvas.canvas",
@@ -230,7 +230,6 @@
     "docs/impractical Architecture/The Information Model/Impractical Architecture $2 manuscript.md",
     "docs/impractical Architecture/Overview/ssss/Aasdf0-00.md",
     "docs/impractical Architecture/Impractical Architecture/Impractical Architecture.md",
-    "docs/impractical Architecture/Impractical Architecture/Index.md",
     "docs/impractical Architecture/Impractical Architecture/The Information Model/Outline.canvas"
   ]
 }

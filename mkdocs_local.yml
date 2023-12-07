@@ -39,6 +39,12 @@ theme:
         - search.suggest
         - search.highlight
         
+# Exclude
+exclude_docs: |
+  hidden
+  **/Index.md
+
+
 # Extensions
 markdown_extensions:
   - footnotes
