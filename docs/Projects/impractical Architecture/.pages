@@ -1,3 +1,6 @@
+# Pages for Impractical Architecture
+
 nav:
-  - Overview: Overview/Overview.md
+  - Overview: Overview
   - The Information Model: the-information-model
+  - Complete Manuscript: manuscript.md

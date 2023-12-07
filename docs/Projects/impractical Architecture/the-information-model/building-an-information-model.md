@@ -38,8 +38,8 @@ Documenting the results of the information model achieves two critical purposes.
 The level of detail of the documentation will depend on the size and maturity of the team/organization, the complexity of the domain and also external requirements for regulated fields (e.g. requirements of design auditability in health care, energy or defense domains). Each organization needs to decide what level is the right one for them. The three essential types of documents to consider are:
 
 1. A Glossary/Dictionary of all the concepts (nouns and verbs) identified, ideally with references to sources and examples of use.
-2. A set of [class diagrams](./Software Models.md#Class-Models) class diagrams and associated descriptions for the main concepts. Diagrams should be centered around connected [classification hierarchies](Describing System State.md#Categorization and Classification). The level of detail and formalism may vary from simply providing the name of the class/interface to an almost programming language complete definition of a class (minus implementation)
-3. [State Charts](Software Models.md#State Charts) for the central classes that govern the behavior of the system.
+2. A set of [class diagrams](software-models.md#Class-Models) class diagrams and associated descriptions for the main concepts. Diagrams should be centered around connected [classification hierarchies](describing-system-state.md#categorization-and-classification). The level of detail and formalism may vary from simply providing the name of the class/interface to an almost programming language complete definition of a class (minus implementation)
+3. [State Charts](software-models.md#State-Charts) for the central classes that govern the behavior of the system.
 
 ## Introduce Storage Considerations
 
@@ -47,7 +47,7 @@ With the steps given so far, the team can expect to gain a solid understanding o
 
 ### Partitioned Storage
 
-Real world systems rarely have the luxury of being able to have a single, *flat* memory space for all its state. As discussed in [[Software Models]], physical limitations and requirements on location of data, lifecycles, etc. dictate that the state of the system will be partitioned in multiple storage systems. The information model resulting from the conceptual model needs to be enriched by defining what parts of it will be supported in each partition and how relationships between entities that end up in separate partitions will be implemented and maintained. Entities in the conceptual model need to be augmented with:
+Real world systems rarely have the luxury of being able to have a single, *flat* memory space for all its state. As discussed in [Software Models](software-models.md), physical limitations and requirements on location of data, lifecycles, etc. dictate that the state of the system will be partitioned in multiple storage systems. The information model resulting from the conceptual model needs to be enriched by defining what parts of it will be supported in each partition and how relationships between entities that end up in separate partitions will be implemented and maintained. Entities in the conceptual model need to be augmented with:
 
 - Identities that include the address of their *home* storage so that they can be referred to unequivocally. The *home* storage is the one that is usually considered the *source of truth*, or the *data authority* that maintains that part of the state of the system.
 - Complete or partial copies of the information contents of the entity in different storage areas to improve performance, reliability, access, etc...
@@ -86,7 +86,7 @@ Even in the cases where the state storage is mostly monolithic (e.g. a big backe
 
 ## Other Non Functional Considerations
 
-In the process of defining the [conceptual model](/#The%20Conceptual%Model) of the domain, it is convenient to ignore certain non-functional considerations to focus on understanding the domain itself. Once this model is built, it is necessary to re-introduce those considerations to provide guidance to implementation, as some decisions need to be made with a broader scope than what specific implementation tasks would allow for. These decisions can be expressed as Stereotypes in UML if they correspond to well understood patterns (e.g. a requirement for an entity or a group of entities to be replicated in multiple independent storage capabilities, or directly described in the document. It cannot be over emphasized that any effort put into documentation must support the goal of creating a shared understanding of the system by the team to avoid over documenting and wasted effort.
+In the process of defining the [conceptual model](#the-conceptual-model) of the domain, it is convenient to ignore certain non-functional considerations to focus on understanding the domain itself. Once this model is built, it is necessary to re-introduce those considerations to provide guidance to implementation, as some decisions need to be made with a broader scope than what specific implementation tasks would allow for. These decisions can be expressed as Stereotypes in UML if they correspond to well understood patterns (e.g. a requirement for an entity or a group of entities to be replicated in multiple independent storage capabilities, or directly described in the document. It cannot be over emphasized that any effort put into documentation must support the goal of creating a shared understanding of the system by the team to avoid over documenting and wasted effort.
 
 Aspects to consider include:
 
