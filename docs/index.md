@@ -1,3 +1,3 @@
 # Jmpicnic's Obsidian Vault
 
-Please Navigate with the menu on the left.
+Please Navigate with the Options on the top.
