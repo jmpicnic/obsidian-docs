@@ -4,27 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "6998dbec9fc54b36",
+        "id": "2f00baa65dee8286",
         "type": "tabs",
         "children": [
           {
-            "id": "710b0c75464e800d",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "empty",
-              "state": {},
-              "pinned": true
-            }
-          }
-        ]
-      },
-      {
-        "id": "1db664ec0b263ff5",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "f67b9e9a63bf9908",
+            "id": "d4f54dfaf300f979",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -170,7 +154,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -188,8 +172,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "f67b9e9a63bf9908",
+  "active": "d4f54dfaf300f979",
   "lastOpenFiles": [
+    "docs/Projects/impractical Architecture/The Information Model/Software Models.md",
+    "docs/Projects/impractical Architecture/The Information Model/Building an Information Model.md",
+    "Software.md",
     "lib",
     "docs/index.md",
     "lib/vis-9.1.2",
@@ -211,11 +198,9 @@
     "docs/Projects/impractical Architecture/The Information Model/The Information Model.md",
     "docs/Projects/impractical Architecture/The Information Model/The Rest.md",
     "docs/Projects/impractical Architecture/The Information Model/Take Aways.md",
-    "docs/Projects/impractical Architecture/The Information Model/Software Models.md",
     "docs/Projects/impractical Architecture/The Information Model/References.md",
     "docs/Projects/impractical Architecture/The Information Model/Index.md",
     "docs/Projects/impractical Architecture/The Information Model/Describing System State.md",
-    "docs/Projects/impractical Architecture/The Information Model/Building an Information Model.md",
     "docs/Projects/impractical Architecture/Overview/Overview.md",
     "docs/Projects/impractical Architecture/Overview/Index.md",
     "docs/Projects/Supply Chain Information Structure/Overview/The Movement Layer.md",
