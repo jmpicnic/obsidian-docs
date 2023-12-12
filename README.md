@@ -1,12 +1,14 @@
----
-title: Miguel's Writings
----
+# Miguel's Writings
 
 This is Miguel's repository for general articles, books and musings. You can browse them at the associated [Github Pages](https://jmpicnic.github.io/obsidian-docs/)
 
 Copyright registration online: [Copyright Registration Portal](https://www.copyright.gov/registration/)
 
 ## License & Copyright
+
+(c) Miguel Pinilla, 2023
+
+[License](https://github.com/jmpicnic/obsidian-docs/blob/main/LICENSE): CC-BY-SA-4.0
 
 Shield: [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
