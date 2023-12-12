@@ -2,9 +2,8 @@ site_name: Jmpicnic's Obsidian Vault # Change this to your site name
 site_description: The HTML rendition of Obsidian's Vault
 site_url: https://jmpicnic.github.io/obsidian-docs/ # Change this to your site URL
 copyright: |
-  __________
-  Copyright: © Salduba Technologies, All rights reserved  
-  License: This work is licensed under the [Creative Commons License CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+  Copyright: © Salduba Technologies,
+  Licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><u>Creative Commons License CC BY-NC-SA 4.0</u></a>
 theme:
     name: 'material'
     logo: assets/meta/favicons.png
@@ -39,9 +38,10 @@ theme:
         - navigation.tabs
         - navigation.tabs.sticky
         - navigation.expand
+#        - navigation.footer
         - search.suggest
         - search.highlight
-        
+
 # Exclude
 exclude_docs: |
   hidden
@@ -94,12 +94,12 @@ markdown_extensions:
 plugins:
   - search
   - meta-descriptions
-  - git-revision-date-localized:
-      type: date
-      fallback_to_build_date: true
-      locale: en
-      custom_format: "%A %d %B %Y"
-      enable_creation_date: true
+#  - git-revision-date-localized:
+#      type: date
+#      fallback_to_build_date: true
+#      locale: en
+#      custom_format: "%A %d %B %Y"
+#      enable_creation_date: true
   - ezlinks:
       wikilinks: true
   - awesome-pages
@@ -136,6 +136,7 @@ extra_css:
     - assets/css/custom_attributes.css
     - assets/css/customization.css
 extra:
+  generator: false
   SEO: assets/meta/SEO.png
   comments: false #disable comments globally
   generate_graph: true #generate the graph of the site

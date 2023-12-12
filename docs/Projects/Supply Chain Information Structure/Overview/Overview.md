@@ -1,3 +1,12 @@
+---
+author: Miguel Pinilla
+Copyright: (c) Miguel Pinilla, All rights reserved
+License: "This work is licensed under the Creative Commons License CC BY-NC-SA 4.0: https://creativecommons.org/licenses/by-nc-sa/4.0/"
+email: miguel.pinilla@saldubatech.com
+share: "true"
+title: Overview
+---
+
 ## The challenge of understanding supply chains
 
 The definition of "Supply Chain" is fairly well understood as some variation of:
@@ -36,15 +45,15 @@ The following table provides a summary of each layer. Following the lead of the 
 
 The Asset layer is concerned with the Operation, Administration and Management of resources that are needed in Supply Chain Operations. These functions include (again, following the Telecommunications industry lead):
 
--   Fault Management: Detect, Diagnose, Isolate and repair faults in assets.
+- Fault Management: Detect, Diagnose, Isolate and repair faults in assets.
 
--   Configuration: Provision, Configure and maintain the information for an asset so that it is readily available for use and can be accounted for properly by its owners, operators, lessees, etc. It critically includes managing asset identifiers like container numbers, vessel IMO's, Vehicle identification numbers, license plates, etc...
+- Configuration: Provision, Configure and maintain the information for an asset so that it is readily available for use and can be accounted for properly by its owners, operators, lessees, etc. It critically includes managing asset identifiers like container numbers, vessel IMO's, Vehicle identification numbers, license plates, etc...
 
--   Accounting: Keep track of investment, costs, etc... associated with each asset and groups of assets.
+- Accounting: Keep track of investment, costs, etc... associated with each asset and groups of assets.
 
--   Performance: Define, monitor and report metrics for the performance of assets.
+- Performance: Define, monitor and report metrics for the performance of assets.
 
--   Security: Manage and track the access and permissions for each asset, critical in establishing chain of custody auditability, fraud prevention and for certain sensitive operations in international or regulated trade.
+- Security: Manage and track the access and permissions for each asset, critical in establishing chain of custody auditability, fraud prevention and for certain sensitive operations in international or regulated trade.
 
 Assets can be physical assets like a vehicle, a warehouse (facility) or a piece of automation equipment, legal assets like rights to routes or landing slots in airports, informational assets themselves like catalog information for SKU's or commercial assets like Vendors, Insurers, etc...
 
