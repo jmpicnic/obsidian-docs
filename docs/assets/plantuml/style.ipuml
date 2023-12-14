@@ -1,0 +1,10 @@
+<style>
+
+.Value {
+  BackgroundColor LightBlue
+}
+
+</style>
+
+skinparam nodesep 70
+skinparam ranksep 50

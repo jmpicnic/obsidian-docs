@@ -1,0 +1,30 @@
+@startuml (id=ORDER_CLASSES)
+
+class Order
+class Line<<Value>> {
+  +quantity: Quantity
+  +charges: Map<String, Money>
+}
+class SKU
+
+class Good
+
+class Allocation<<Value>>
+class Accrual<<Value>> {
+  +description: String
+  +amount: Money
+}
+class Fulfillment<<Value>>{
+  +quantity: Quantity
+}
+
+
+class Party
+
+
+class Allocation<<Value>> {
+  +quantity: Quantity
+}
+
+
+@enduml

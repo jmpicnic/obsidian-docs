@@ -83,14 +83,16 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences:
       custom_fences:
-        - name: mermaid
-          class: mermaid
+        - name: plantml
+          class: plantuml
           format: !!python/name:pymdownx.superfences.fence_code_format
   - plantuml_markdown:
-      # base_dir: 'domain:merchandising:sales-transaction'
-      # plantuml_cmd: 'java -Djava.awt.headless=true -Dplantuml.include.path="domain:merchandising:sales-transaction" -jar plantuml.jar'
-      #  backstage seems to block svg, so set to png for Backstage
       format: png
+      base_dir: !relative
+#      server: 'https://plantuml.com/plantuml'
+#      server: ''
+#      kroki_server: ''
+      plantuml_cmd: 'java -DPLANTUML_SECURITY_PROFILE=UNSECURE -DPLANTUML_LIMIT_SIZE=8192 -Dplantuml.include.path="docs/Projects:docs/assets/plantuml:docs" -Djava.awt.headless=true -jar /opt/homebrew/Cellar/plantuml/1.2023.13/libexec/plantuml.jar -config docs/assets/plantuml/config.cfg'
 plugins:
   - search
   - meta-descriptions
@@ -125,6 +127,7 @@ hooks:
   - overrides/hooks/on_page_markdown.py
   - overrides/hooks/on_env.py
   - overrides/hooks/on_files.py
+#  - overrides/hooks/plant_uml_env.py
 extra_javascript:
   - https://cdn.jsdelivr.net/gh/ObsidianPublisher/assets@main/dist/javascript.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
@@ -135,6 +138,7 @@ extra_css:
     - assets/css/admonition.css
     - assets/css/custom_attributes.css
     - assets/css/customization.css
+#    - assets/css/draft-watermark.css
 extra:
   generator: false
   SEO: assets/meta/SEO.png

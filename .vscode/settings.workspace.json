@@ -1,0 +1,22 @@
+{
+    "plantuml.commandArgs": [
+        "-DPLANTUML_LIMIT_SIZE=8192",
+        "-DPLANTUML_SECURITY_PROFILE=UNSECURE"
+    ],
+    "plantuml.render": "Local",
+    "plantuml.diagramsRoot": "docs",
+    "markdown.plantuml.server": "",
+    "markdown-preview-enhanced.plantumlJarPath": "/opt/homebrew/Cellar/plantuml/1.2023.12/libexec/plantuml.jar",
+    "markdown-preview-enhanced.enableTypographer": true,
+    "markdown-preview-enhanced.frontMatterRenderingOption": "table",
+    "markdown-preview-enhanced.usePandocParser": true,
+    "plantuml.jar": "/opt/homebrew/Cellar/plantuml/1.2023.12/libexec/plantuml.jar",
+    "terminal.integrated.env.osx": {
+        "PLANTUML_LIMIT_SIZE": "8192",
+        "PLANTUML_SECURITY_PROFILE": "UNSECURE"
+    },
+    "markdown-preview-enhanced.krokiServer": "",
+    "markdown-preview-enhanced.mathRenderingOption": "MathJax",
+    "markdown.preview.fontSize": 12,
+    "markdown.plantuml.imageFormat": "png"
+}
