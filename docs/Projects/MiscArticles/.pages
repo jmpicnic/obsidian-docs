@@ -1,5 +1,6 @@
 nav:
   - Practical bits:
     - Publishing Documents to GH Pages: mkdocs-to-gh-pages.md
+    - Publishint to GH Packages from sbt: gh-packages-from-sbt.md
   - Enterprise & Supply Chain Systems:
     - ERPs cannot handle Supply Chains: erps-cannot-handle-supply-chains.md
