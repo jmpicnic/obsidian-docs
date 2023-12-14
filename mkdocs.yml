@@ -5,6 +5,6 @@ markdown_extensions:
   # Need one to make Inherit work O.K.
   mdx_truly_sane_lists:
   plantuml_markdown:
-    plantuml_cmd: 'java -Djava.awt.headless=true -jar plantuml.jar'
-    # backstage seems to block svg, so set to png for Backstage
     format: png
+    base_dir: !relative
+    plantuml_cmd: 'java -DPLANTUML_SECURITY_PROFILE=UNSECURE -DPLANTUML_LIMIT_SIZE=8192 -Dplantuml.include.path="docs/Projects:docs/assets/plantuml:docs" -Djava.awt.headless=true -jar plantuml.jar -config docs/assets/plantuml/config.cfg'

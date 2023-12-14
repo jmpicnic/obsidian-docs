@@ -83,8 +83,8 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences:
       custom_fences:
-        - name: plantml
-          class: plantuml
+        - name: mermaid
+          class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
   - plantuml_markdown:
       format: png
