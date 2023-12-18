@@ -112,7 +112,7 @@ $$
 
 This formulation allows us to bring a lot of intuition to bear derived from our calculus experience, including the conditions under which calculus is not applicable.
 
-- Conventional cost variances only consider the effects of the variation of units ($\Delta_u$), variable cost ($\Delta_v$) and fixed cost ($\Delta_f$) combined linearly, which corresponds to the simplifying assumption of constant fixed costs and variable costs with respect to volume. In the presence of rate variability, we would need to consider *second order* effects with are zero in the simplified formulation.
+- Conventional cost variances only consider the effects of the variation of units ($\Delta_u$), variable cost ($\Delta_v$) and fixed cost ($\Delta_f$) combined linearly, which corresponds to the simplifying assumption of constant fixed costs and variable costs with respect to volume. In the presence of rate variability, we would need to consider *second order* effects which are zero in the simplified formulation.
 - In financial accounting there are no "negligible effects" as in calculus when $dx \rightarrow 0$, so the term $dudc_v$ cannot be removed from the calculation. On the other hand, for KPI definition as a management tool, if the deviations in units *and* variable cost are small, that term can be ignored, as it is harder to interpret in terms of taking corrective action.
 - From calculus, we know that all derivative and differential calculations are not valid in the presence of non [differentiable functions](https://en.wikipedia.org/wiki/Differentiable_function), which means that we are safe if we stay within the assumptions of linear costs and small variations of cost coefficients, but we need to tread very carefully when volume or cost coefficients deviate substantially as their behavior in real life is far from continuous, let alone differentiable. Calculus tells us that in these cases, our regular cost accounting, based on incremental calculations will not yield sound results.
 - Finally, it is rare the business operation in which the volume is a continuous variable, only certain processes like energy production or chemical manufacturing approximate this simplification. Rigorous Calculus gives up in these situations altogether. For practitioners, this is just another guardrail to be considered when interpreting indicators, and how valid they are in a particular operation. Operations in which the unit is small (e.g. mass production of commodity parts or parcel sorting in distribution) can be reasonably approximated by these calculations, which operations with few, or even single unit production (e.g. Construction, aerospace, ...) need to resort to different mechanisms for accounting, like [Earned Value Management](https://en.wikipedia.org/wiki/Earned_value_management) finding more tractable units for measurement.
@@ -169,7 +169,7 @@ $$
 C = C_f + \sum_r{u_rc_r}
 $$
 
-with $u_r$ being the units of consumption of resource $r$ (the *cost driver* and $c_r$ the variable cost per unit of resource $r$. Now, if to produce one unit of product takes $m_r$ units of resource $r$, the cost will then be:
+with $u_r$ being the units of consumption of resource $r$ (the *cost driver*) and $c_r$ the variable cost per unit of resource $r$. Now, if to produce one unit of product takes $m_r$ units of resource $r$, the cost will then be:
 
 $$
 C = C_f + u\sum_r{m_rc_r}
