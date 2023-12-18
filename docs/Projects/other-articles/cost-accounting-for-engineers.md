@@ -41,7 +41,7 @@ $$
 \hat{C} = \hat{C_f} + \hat{c_v} \hat{u}
 $$
 
-with the decoration ($\hat{\;\;}$) to denote the _estimated_ value of the corresponding variable. We express the deviation of any of the involved variables as:
+with the decoration ($\hat{\;\;}$) to denote the *estimated* value of the corresponding variable. We express the deviation of any of the involved variables as:
 
 $$
 \begin{align*}
@@ -123,8 +123,7 @@ $$
 C(\bar{x}) = \hat{C} + \nabla C(\hat{\bar{x}})d\bar{x} + \frac{1}{2}\nabla^2C(\hat{\bar{x}})d^2\bar{x}
 $$
 
-This starts to feel like an overkill of formalism, and to some extent it is. The underlying concepts that cost deviations can be expressed as the budgeted cost plus a calculation of the deviations of the underlying factors with the precision that management KPI's require is a powerful one to understand more sophisticated cost accounting like 
-[absorbtion costing](https://www.investopedia.com/terms/a/absorptioncosting.asp#:~:text=Absorption%20costing%20is%20a%20method,costing%20or%20full%20absorption%20costing.)  or [Activity Based Costing](https://www.investopedia.com/terms/a/abc.asp)
+This starts to feel like an overkill of formalism, and to some extent it is. The underlying concepts that cost deviations can be expressed as the budgeted cost plus a calculation of the deviations of the underlying factors with the precision that management KPI's require is a powerful one to understand more sophisticated cost accounting like [absorption costing](https://www.investopedia.com/terms/a/absorptioncosting.asp)
 
 ## Absorption costs
 
@@ -162,7 +161,7 @@ leads to non linear variability, harder to estimate and interpret and forecast u
 
 In practice, it is extremely rare that the creation of any product consumes a single kind of resource. The original, simple formula $C = C_f + c_v u$ bundles all the variable resource consumption into a single rate $c_v$ without worrying where it comes from.
 
-In reality, and even considering only variable costs, the creation of a product will consume multiple resources, and costs can be known only in terms of these resources. To address this complexity, Management accounting resorts to [Activity Based Costs]((https://www.investopedia.com/terms/a/abc.asp) or *ABC*. In *ABC* costs are assigned to activities or  [cost drivers](https://www.investopedia.com/terms/a/activity-cost-driver.asp) which represent the use of resources like materials, labor, etc.
+In reality, and even considering only variable costs, the creation of a product will consume multiple resources, and costs can be known only in terms of these resources. To address this complexity, Management accounting resorts to [Activity Based Costs](https://www.investopedia.com/terms/a/abc.asp) or *ABC*. In *ABC* costs are assigned to activities or  [cost drivers](https://www.investopedia.com/terms/a/activity-cost-driver.asp) which represent the use of resources like materials, labor, etc.
 
 Using the formalism we have developed above, the cost, in terms of the resources consumed will be:
 
