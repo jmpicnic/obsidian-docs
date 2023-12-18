@@ -45,6 +45,7 @@ with the decoration ($\hat{\;\;}$) to denote the *estimated* value of the corres
 
 $$
 \begin{align*}
+\\
 C &= \hat{C} + \Delta _c
 \\
 C_f &= \hat{C_f} + \Delta _f
@@ -52,17 +53,22 @@ C_f &= \hat{C_f} + \Delta _f
 c_v &= \hat{c_v} + \Delta _v
 \\
 u &= \hat{u} + \Delta _u
+\\
 \end{align*}
 $$
 
 and the cost expression, this time relating it back to the estimate values results, with a little bit of reordering..
 
 $$
+
 \begin{align*}
-  \hat{C} + \Delta_c &= (\hat{C_f} + \Delta_f) + (\hat{c_v} + \Delta_v)(\hat{u} + \Delta_u)
-  \\
-  \hat{C} + \Delta_c &= \hat{C_f} + \hat{c_v} \hat{u} + \hat{c_v}\Delta_u + \hat{u}\Delta_v + \Delta_f + \Delta_u\Delta_v
+
+\hat{C} + \Delta_c &= (\hat{C_f} + \Delta_f) + (\hat{c_v} + \Delta_v)(\hat{u} + \Delta_u)
+\\
+\hat{C} + \Delta_c &= \hat{C_f} + \hat{c_v} \hat{u} + \hat{c_v}\Delta_u + \hat{u}\Delta_v + \Delta_f + \Delta_u\Delta_v
+
 \end{align*}
+
 $$
 
 Looking at it graphically, we have a clear interpretation of the cost variance terms:
