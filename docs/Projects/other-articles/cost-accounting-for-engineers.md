@@ -58,7 +58,11 @@ $$
 and the cost expression, this time relating it back to the estimate values results, with a little bit of reordering..
 
 $$
-\hat{C} + \Delta_c = (\hat{C_f} + \Delta_f) + (\hat{c_v} + \Delta_v)(\hat{u} + \Delta_u) = \hat{C_f} + \hat{c_v} \hat{u} + \hat{c_v}\Delta_u + \hat{u}\Delta_v + \Delta_f + \Delta_u\Delta_v
+\begin{array}{}
+\hat{C} + \Delta_c &=& (\hat{C_f} + \Delta_f) + (\hat{c_v} + \Delta_v)(\hat{u} + \Delta_u)
+\\
+\hat{C} + \Delta_c &=& \hat{C_f} + \hat{c_v} \hat{u} + \hat{c_v}\Delta_u + \hat{u}\Delta_v + \Delta_f + \Delta_u\Delta_v
+\end{array}
 $$
 
 Looking at it graphically, we have a clear interpretation of the cost variance terms:
@@ -119,18 +123,18 @@ $$
 C(\bar{x}) = \hat{C} + \nabla C(\hat{\bar{x}})d\bar{x} + \frac{1}{2}\nabla^2C(\hat{\bar{x}})d^2\bar{x}
 $$
 
-This starts to feel like an overkill of formalism, and to some extent it is. The underlying concepts that cost deviations can be expressed as the budgeted cost plus a calculation of the deviations of the underlying factors with the precision that management KPI's require is a powerful one to understand more sophisticated cost accounting like [absorption costing](https://www.investopedia.com/terms/a/absorptioncosting.asp)
+This starts to feel like an overkill of formalism, and to some extent it is. The underlying concepts that cost deviations can be expressed as the budgeted cost plus a calculation of the deviations of the underlying factors with the precision that management KPI's require is a powerful one to understand more sophisticated cost accounting like [absorption costing](https://www.investopedia.com/terms/a/absorptioncosting.asp) and multi-product cost analysis.
 
 ## Absorption costs
 
 Absorption costs try to reduce all costs that affect a product as variable costs. It transforms the cost calculation from above ($C = C_f + c_vu$) into a seemingly simpler $C = c_uu$ by allocating a portion of the $C_f$ fixed costs to each unit produced, in effect:
 
 $$
-C = \left( \frac{C_f}{u}+c_v \right) u = c_u u
+\begin{array}{}
+&C = \left( \frac{C_f}{u}+c_v \right) u = c_u u&
 \\
-\text{where}
-\\
-c_u = \frac{C_f}{u}
+&\text{where: } c_u := \frac{C_f}{u}&
+\end{array}
 $$
 
 Of course, the value of $u$ is not known in advance, so in practice, the values or  $\hat{C_f},\hat{u}$ are used to determine $c_u$.
