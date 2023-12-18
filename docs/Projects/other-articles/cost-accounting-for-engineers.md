@@ -44,17 +44,15 @@ $$
 with the decoration ($\hat{\;\;}$) to denote the *estimated* value of the corresponding variable. We express the deviation of any of the involved variables as:
 
 $$
-\begin{align*}
+\begin{array}{}
+C &=& \hat{C} + \Delta _c
 \\
-C &= \hat{C} + \Delta _c
+C_f &=& \hat{C_f} + \Delta _f
 \\
-C_f &= \hat{C_f} + \Delta _f
+c_v &=& \hat{c_v} + \Delta _v
 \\
-c_v &= \hat{c_v} + \Delta _v
-\\
-u &= \hat{u} + \Delta _u
-\\
-\end{align*}
+u &=& \hat{u} + \Delta _u
+\end{array}
 $$
 
 and the cost expression, this time relating it back to the estimate values results, with a little bit of reordering..

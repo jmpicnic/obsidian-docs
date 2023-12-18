@@ -6,7 +6,6 @@ markdown_extensions:
   mdx_truly_sane_lists:
   pymdownx.arithmatex:
     generic: true
-    block_syntax: dollar
   plantuml_markdown:
     format: png
     base_dir: !relative
