@@ -8,3 +8,7 @@ markdown_extensions:
     format: png
     base_dir: !relative
     plantuml_cmd: 'java -DPLANTUML_SECURITY_PROFILE=UNSECURE -DPLANTUML_LIMIT_SIZE=8192 -Dplantuml.include.path="docs/Projects:docs/assets/plantuml:docs" -Djava.awt.headless=true -jar plantuml.jar -config docs/assets/plantuml/config.cfg'
+
+plugins:
+  - blog:
+      draft: false

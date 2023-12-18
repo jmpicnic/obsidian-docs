@@ -4,7 +4,9 @@ Copyright: (c) Miguel Pinilla, All rights reserved
 License: "This work is licensed under the Creative Commons License CC BY-NC-SA 4.0: https://creativecommons.org/licenses/by-nc-sa/4.0/"
 email: miguel.pinilla@saldubatech.com
 share: "true"
+title: ERPs Cannot Handle Supply Chains
 ---
+
 Enterprise Resource Planning (ERP) systems originated in the manufacturing industry, and were initially used to manage production processes and inventory. They have since evolved to encompass a wider range of business operations, including financial transactions, supply chain management, human resources, and customer relationship management.
 
 At a high level, the widespread success and ubiquity of enterprise resource planning systems in companies of all sizes and industries stems from their strengths in:
@@ -23,7 +25,7 @@ Enterprise software architecture has been so successful that it has been codifie
 
 As with many other technologies, the availability and maturity of these frameworks has led to their application to problems that do not quite fit the initial architectural pattern, but still benefit from the individual capabilities the frameworks offer, and in some cases, simply because it is a well understood architecture by the available engineering talent. JEE or its close relative [Spring](https://spring.io/), for example, has been applied to a wide range of problems, from warehouse automation to equipment maintenance, web and content portals, and more. In particular, multiple supply chain management systems have been built using this architectural pattern.
 
-# ERP’s are built to plan the resources of enterprises
+## ERP’s are built to plan the resources of enterprises
 
 The headline is a stupid-sounding, self-evident statement but it is frequently forgotten when trying to apply the same technologies, patterns and systems to supply chains. Supply Chains are not Enterprises, cannot be described simply in terms of resources and cannot be planned, if we accept this bold statement, it should not be a surprise that ERP systems are ill fitted to support supply chain management activities. We need to unpack this statement to understand why ERP systems are not applicable to Supply Chain Management and identify what an SCM system architecture should look like.
 
@@ -67,7 +69,7 @@ As mentioned in previous sections, supply networks are composed of independent c
 
 Supply Chains nevertheless work effectively every day without the need for a central planner to intervene. They naturally rely on [market based optimization](https://user.it.uu.se/~arnea/ps/markOpt.pdf) even if they don’t apply those algorithms explicitly. Supply chains exchange market signals (price, availability, lead times, etc…) and parties use those to determine what actions to take instead of using detailed resource information as traditional planning systems do.
 
-# Where do we go from here
+## Where do we go from here
 
 So, if the most prevalent architectural approach to business systems is not adequate to handle supply chains, what is the alternative? It would be incredibly arrogant to try to propose a complete framework to build supply chain systems at this point, as there is still a lot of unknowns and uncertainty regarding technologies and also the specific requirements for these systems, yet some elements are emerging that are worth pointing out and that will be topics for other articles:
 
@@ -81,7 +83,7 @@ So, if the most prevalent architectural approach to business systems is not adeq
 
 * The information that these protocols will interchange will need to follow the model of market signals, exceptions, etc… To represent commitments between SC parties, communication protocols need to support non-repudiability (qualified with validity intervals, etc…) will need to be ensured along with the standard privacy and security mechanisms.
 
-* Data acquisition for these systems will need to make decisions on the veracity and certainty of the information that data sources provide, including assessing multiple, possibly inconsistent data sources. Data Science techniques of likehood maximization and estimation, including Machine Learning models will need to be brought to bear as smart ingestion engines that generate the update requests for the core CQRS based data authorities mentioned above.
+* Data acquisition for these systems will need to make decisions on the veracity and certainty of the information that data sources provide, including assessing multiple, possibly inconsistent data sources. Data Science techniques of likelihood maximization and estimation, including Machine Learning models will need to be brought to bear as smart ingestion engines that generate the update requests for the core CQRS based data authorities mentioned above.
 
 * Interpretation of the “best guess” of the system state contained in a workspace also needs to be customized for the different consumers of the information as their use and internal policies will vary among the parties in a supply chain. Explicit “interpreter” modules that post-process the information and changes to it will be needed to feed operations workflows and actions.
 

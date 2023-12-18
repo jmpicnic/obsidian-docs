@@ -12,7 +12,7 @@ from dateutil import parser
 
 def obsidian_graph():
     """Generates a graph of the Obsidian vault."""
-    # pylint: disable=import-outside-toplevel
+     # pylint: disable=import-outside-toplevel
     import obsidiantools.api as otools
 
     # pylint: disable=import-outside-toplevel``

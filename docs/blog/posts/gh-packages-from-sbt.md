@@ -1,4 +1,10 @@
 ---
+authors:
+  - mpinilla
+categories:
+  - Software Practice
+date: 2023-12-13
+draft: false
 title: Publish to GH Packages from Sbt without plugins
 author: Miguel Pinilla
 Copyright: (c) Miguel Pinilla, All rights reserved
@@ -7,12 +13,12 @@ email: miguel.pinilla@saldubatech.com
 share: "true"
 ---
 
-!!!Note
-  These are not step by step instructions, they are a summary of the notes I took when setting up my environment. To follow them, you should be familiar with your OS (mine is MacOS), Python, Pip, Mkdocs and Github Actions
-
-## What I wanted
-
 Use a zero cost Maven repository to publish my hobby project packages and do that from Scala/sbt without needing additional plugins.
+
+<!-- end_excerpt -->
+
+!!! note
+    These are not step by step instructions, they are a summary of the notes I took when setting up my environment. To follow them, you should be familiar with your OS (mine is MacOS), Python, Pip, Mkdocs and Github Actions
 
 ## The Quick Solution
 

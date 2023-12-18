@@ -9,3 +9,7 @@ site/
 ## Python compiled files
 
 **/*.pyc
+**/__pycache__/**
+
+# Mac Stuff
+.DS_Store

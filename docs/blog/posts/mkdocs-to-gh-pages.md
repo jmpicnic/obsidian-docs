@@ -1,4 +1,10 @@
 ---
+authors:
+  - mpinilla
+categories:
+  - Software Practice
+date: 2023-12-13
+draft: false
 title: Publishing Documentation to GH Pages
 author: Miguel Pinilla
 Copyright: (c) Miguel Pinilla, All rights reserved
@@ -6,11 +12,6 @@ License: "This work is licensed under the Creative Commons License CC BY-NC-SA 4
 email: miguel.pinilla@saldubatech.com
 share: "true"
 ---
-
-!!!Note
-  These are not step by step instructions, they are a summary of the notes I took when setting up my environment. To follow them, you should be familiar with your OS (mine is MacOS), Python, Pip, Mkdocs and Github Actions
-
-## What I wanted
 
 The use case I was trying to fulfill:
 
@@ -23,6 +24,11 @@ The use case I was trying to fulfill:
 7. Bonus:
    1. Be able to publish to Medium and other syndication platforms.
    2. Somewhat just for nostalgic reasons, be able to author Latex documents in the same environment and publish them.
+
+<!-- end_excerpt -->
+
+!!! note
+    These are not step by step instructions, they are a summary of the notes I took when setting up my environment. To follow them, you should be familiar with your OS (mine is MacOS), Python, Pip, Mkdocs and Github Actions
 
 ## The Tools I chose
 
@@ -45,6 +51,8 @@ Github actions are a very convenient way to publish html sites to github pages. 
 1. Enable Github Actions in the repository settings in `Settings->Actions->General`
 2. Enable Github pages in the repository by going to `Settings->Pages` and selecting the Source to be `GitHub Actions`.
 3. Create a github actions workflow in `.github/workflows` with the following content (see inline comments for clarifications):
+
+{% raw %}
 
 ```yaml
 ---
@@ -108,7 +116,9 @@ jobs:
         uses: actions/deploy-pages@v2 # or the latest "vX.X.X" version tag for this action
 ```
 
-### Additional notes
+{% endraw %}
+
+## Additional notes
 
 1. The public action [jmpicnic/actions-gen-mkdocs](https://github.com/jmpicnic/actions-gen-mkdocs) encapsulates the building of mkdocs with the tools needed to run latex and plantuml. You can also copy it and modify to your heart content.
 

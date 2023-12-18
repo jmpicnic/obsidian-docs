@@ -64,7 +64,7 @@ Modern Object Oriented programming languages and frameworks support a lot of the
 
 - **Patterns**: This is the area where tools, frameworks and languages are least mature yet. Most of the work on patterns is done by frameworks (e.g. Web Application frameworks like [The Spring Framework](https://spring.io/projects/spring-framework)) that rely on documentation, examples and convention to implement them. Advanced languages like Kotlin and Scala provide a rich type system which includes generics and [Higher Order Kinds](https://en.wikipedia.org/wiki/Kind_(type_theory)) that offer a lot of promise to describe patterns in a way that can be reused and made part of the "underlying abstractions" that designers can use.
 
-# UML
+## UML
 
 All Software models defined above are strongly tied to specific implementation mechanisms and the tools and languages that support them have features and constraints to support the intended implementation. Most of the time these additional features require a level of detail in the description that gets in the way of thinking and expressing the design when it is not fully defined. In response to this need, several graphical and textual notations to express the design in a "non-implementable" state have been proposed over time. The two most popular ones are Entity-Relationship diagrams and UML. Entity-Relationship diagrams are very close to the relational model described above. The [Unified Modeling Language](https://en.wikipedia.org/wiki/Unified_Modeling_Language) appeared in the mid 1990's from the work of Grady Booch, James Rumbaugh and Ivar Jacobson in early Object Oriented methodologies in the late 80's and early 90's as an attempt to provide methodology guidance and tools for the then emerging object oriented programming languages.
 
@@ -72,7 +72,7 @@ UML, particularly in its 2.X versions, has a large collection of different diagr
 
 The full UML specification requires enough information to make the design almost executable, or almost directly compilable into an executable system. At that point, UML becomes way too burdensome for the purposes of communicating and discussing a design, particularly in the early stages of architectural design, while at the same time not giving the engineer enough flexibility to prescribe enough implementation details to make it a "production worthy" system. In the context of architectural design we recommend to constrain the use of UML to the engineer-to-engineer communication, with the level of detail and formalism appropriate for the organization.
 
-## Class Models
+### Class Models
 
 Class Diagrams describe a fairly standard Object Oriented model with some interesting additions. A class is expressed as:
 
@@ -120,7 +120,7 @@ The three types of associations can be used to represent containment vs. referen
 
 Note that, as discussed above in the [Relations and References](#relations-and-references) section regular programming languages do not directly support the separate semantics of the different types of associations. UML does not support directly separate concepts for *Entities* with an identity and *Structured Values* without it, which some programming languages are starting to support (`value` classes in Java, `case` classes in Scala or `data` classes in Kotlin). This can be indicated using *Stereotypes*
 
-## State Charts
+### State Charts
 
 In Object Oriented design, which is the basis of UML, classes include not only data structure but also behaviors. The full UML specification supports behavior with a number of constructs, including a formal version of constraints [OCL-Object Constraint Language](https://www.omg.org/spec/OCL/2.4/PDF) which, as mentioned before, it becomes very verbose and complex when trying to describe detailed behaviors. A good compromise between detail and verbosity is to use [State Diagrams](https://www.baeldung.com/cs/uml-state-diagrams), based on David Harel's [State Chart formalism](https://www.sciencedirect.com/science/article/pii/0167642387900359) Without describing the formalism in detail, state charts focus on a distinguished element of state of an object belonging to a class. This *State* is described as an enumeration of values, possibly nested values that determine the main *modes* of behavior of the object. A classic example of the power of this formalism is the representation of the state of a phone call. A phone call is a complex object that includes elements like a data channel, encoding, signaling, routing, etc. but for certain purposes it is useful to focus on what the different regimes of behavior are, codifying them in discrete states.
 
@@ -170,7 +170,7 @@ BUSY_TRUNK --> SHUTTING_DOWN: on-hook
 
 State Charts, and similar [Activity Diagrams](https://www.ibm.com/docs/en/rsm/7.5.0?topic=diagrams-activity) or the more formal description of [SDL-92 ](https://www.amazon.com/Systems-Engineering-Using-SDL-92-Olsen/dp/0444568360?&_encoding=UTF8&tag=saldubatechno-20&linkCode=ur2&linkId=9e45e04dc09719e018e31ebeaeecb027&camp=1789&creative=9325)can be used to describe multiple aspects of system design. In the context of the information model, they are best used to describe the overall behavior of classes (entities), or groups of entities that appear in Class Diagrams.
 
-## The tools conundrum
+### The tools conundrum
 
 There are a myriad tools to draw UML diagrams. Most popular diagraming tools like [Visio](https://www.microsoft.com/en-us/microsoft-365/visio/flowchart-software), [LucidChart](https://www.lucidchart.com/pages/) or [draw.io](https://www.drawio.com/) support UML shape templates. There are multiple [Open Source tools](https://medevel.com/open-source-uml-tools/) with different levels of support and comprehensive commercial tools like [Visual Paradigm](https://www.visual-paradigm.com/), [Enterprise Architect](https://sparxsystems.com/) or the venerable [IBM Rational Software Architect](https://www.ibm.com/docs/en/rsas/7.5.0) that traces its origins to the original Booch and Rumbaugh efforts. The more sophisticated the tools, the more commitment they require from a team and the steeper their learning curve, which makes it very difficult to adopt the more advanced tools in smaller and fast moving teams. In addition, the verbosity/expressiveness balance is very tricky to achieve. Many of these tools share what in my opinion is the original sin of the [UML Standard](https://www.omg.org/spec/UML/2.5.1/PDF) that originated as a Diagram standard in the first place. The Standard specification has moved to define metadata models, abstract syntax conformance, etc. At the same time, programming languages capabilities for information modeling have progressed enormously with the introduction of Generics, higher order functions, etc. which in some cases are more expressive than UML itself (e.g. Scala's Higher Order Kinds and type inference compiler does not have a clear parallel in UML). 
 

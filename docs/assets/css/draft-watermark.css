@@ -1,10 +1,40 @@
-.draft-watermark::after {
-  content: "DRAFT";
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 48px;
-  color: rgba(255, 0, 0, 0.5); /* Adjust color and opacity as needed */
-  pointer-events: none; /* Prevent interaction with the watermark */
+/* @media print { */
+  .draftWatermark {
+    text-align: center;
+    display: block;
+    position: fixed;
+    top: 35%;
+    left: 0%;
+    width:80%;    
+    font-size: 96px;
+    font-weight: bold;
+    opacity: 0.4;
+    color:grey;
+    z-index: 99;
+    transform: rotate(-45deg);
+  }
+/* } */
+  
+/*
+@media screen {
+  .draftWatermark {
+    display: block;
+    width:40%;
+    position: fixed;
+    top: 40%;
+    left: 30%;
+    font-size: 82px;
+    font-weight: bold;
+    opacity: 0.5;
+    color:grey;
+    z-index: 5;
+    transform: rotate(-45deg);
+  }
 }
+*/
+
+.draftWatermark::before {
+  content: "DRAFT";
+}
+/* not sure this does anything... */
+
