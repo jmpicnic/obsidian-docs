@@ -31,7 +31,6 @@ A *Good* is the object of the commercial exchange
 ```plantuml
 @startuml (id=ORDER_CLUSTER)
 
-'!include ../../../assets/plantuml/style.ipuml
 !include style.ipuml
 hide <<Value>> stereotype
 
@@ -41,9 +40,10 @@ end title
 
 !include Projects/supply-chain-information-structure/Overview/transaction-classes.puml
 remove Allocation
+remove UnitOfMeasure
 
 Fulfillment "1" --> "*" Accrual
-Fulfillment "*" --> "0..1" Good
+Fulfillment "*" --> "0..*" Good
 Line "*" --> "1" SKU: for
 
 SKU "1" <- "*" Good: is described by
@@ -69,10 +69,11 @@ title
 end title
 
 !include Projects/supply-chain-information-structure/Overview/transaction-classes.puml
-remove Fulfillment
+'remove Fulfillment
 remove Order
 remove Party
 remove Accrual
+remove UnitOfMeasure
 
 
 Line "*" --> "1" SKU: for
@@ -80,6 +81,9 @@ SKU "1" <- "*" Good: is described by
 
 Line "1" *-> "*" Allocation
 Allocation "*" --> "0..1" Good: of
+
+Fulfillment "*" --> "0..*" Good: with
+Allocation "*" <- "1" Fulfillment: from
 
 @enduml
 ```

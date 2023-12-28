@@ -5,9 +5,14 @@ class Line<<Value>> {
   +quantity: Quantity
   +charges: Map<String, Money>
 }
+
 class SKU
 
-class Good
+class UnitOfMeasure
+
+class Good {
+  +quantity: Quantity
+}
 
 class Allocation<<Value>>
 class Accrual<<Value>> {
