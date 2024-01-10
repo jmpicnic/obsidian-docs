@@ -316,18 +316,18 @@ VTx ||-|{ LTx: serviced by
 !!! note
     For notation, `<Prefix>`.`<FieldName>` means the `FieldName` or the `Prefix` transaction with `C`, `V` and `L` respectively for Customer, Vendor and Logistics Transactions
 
-**Customer Transaction Balance**
+#### Customer Transaction Balance
+
 $$
-\begin{align*}
-C.invoiceAmount &=\\
-& C.orderAmount \\
-+& C.deliveryCosts \\
-+& C.taxAndExternalFeesTotal \\
-+& C.transactionFeesTotal \\
--& C.vendorCouponAMount \\
--& C.distributorCouponAmount \\
--& C.haggleRedemption
-\end{align*}
+\begin{array}{ll}
+C.invoiceAmount = & C.orderAmount\\
+&+ C.deliveryCosts\\
+&+ C.taxAndExternalFeesTotal\\
+&+ C.transactionFeesTotal\\
+&- C.vendorCouponAMount\\
+&- C.distributorCouponAmount\\
+&- C.haggleRedemption
+\end{array}{}
 $$
 
 **Logistics Costs Rollup**
@@ -335,28 +335,28 @@ $$
 C.deliveryCosts = \sum_{ltx}{L.estimateCostToCustomer}
 $$
 
-**Vendor Transaction Balance**
+#### Vendor Transaction Balance
+
 $$
-\begin{align*}
-V.invoiceAmount &=\\
-& V.orderAmount \\
-+& V.costAndSurcharges \\
-+& V.taxAndExternalFeesTotal \\
-+& V.transactionFeesTotal \\
--& V.coupon \\
-\end{align*}
+\begin{array}{ll}
+V.invoiceAmount =& V.orderAmount \\
+&+ V.costAndSurcharges \\
+&+ V.taxAndExternalFeesTotal \\
+&+ V.transactionFeesTotal \\
+&- V.coupon \\
+\end{array}{}
 $$
 
-**Pickup and Delivery Dates**
-$$
-\begin{align*}
-C.deliveryEstimate &=& &\max_{ltx}{(L.estimateDeliveryTime)} \\
-C.deliveryActual &=& &\max_{ltx}{(L.actualDeliveryTime)}
-V.pickupTimeScheduled &=& &\max_{ltx}{(L.estimatePickupTime)} \\
-V.pickupTimeActual &=& &\max_{ltx}{(L.actualPickupTime)}
-\end{align*}
-$$
+#### Pickup and Delivery Dates
 
+$$
+\begin{array}{lcl}
+C.deliveryEstimate &=& \max_{ltx}{(L.estimateDeliveryTime)} \\
+C.deliveryActual &=& \max_{ltx}{(L.actualDeliveryTime)}\\
+V.pickupTimeScheduled &= &\max_{ltx}{(L.estimatePickupTime)} \\
+V.pickupTimeActual &= &\max_{ltx}{(L.actualPickupTime)}
+\end{array}{}
+$$
 
 ## Dashboards
 
@@ -376,8 +376,6 @@ $$
 
 The following metrics are defined for Carriers:
 
-### Basic Metrics
-
 Volume
 : Measuring how much business was done with a carrier or a group of carriers during the period.
 
@@ -393,10 +391,10 @@ Performance
 - **Delivery Lead Time Variance**: The Average and P90 statistic of the value:
 
 $$
-\begin{align*}
+\begin{array}{ll}
 LTV =& (estimateDeliveryTime - estimatePickupTime) \\
     &- (actualDeliveryTime - actualPickupTime)
-\end{align*}
+\end{array}{}
 $$
 
 - **Delivery SLA**: The Average and P90 statistic of the `actualDeliveryTime` minus `estimateDeliveryTime`
