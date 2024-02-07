@@ -7,8 +7,6 @@ share: true
 title: The Impractical Engineer: Defining Performance Measurement
 ---
 
-{{ draftMark }}
-
 This article aims to give a brief but rigorous overview of how to understand and approach Performance Measurement in a way that can be applied to many different fields. To keep the article short and concise, many details and other interesting topics have been left out, with the intent of exploring them in follow up articles, like how to use these metrics for control or decision making and when it is preferable to measure outcomes vs. observing signals internal to the system itself, etc...
 
 In keeping with the *Impractical Engineer* spirit of the series, I have made an effort to ground the writing in first principles and make as few assumptions as possible. Any feedback on how to improve in any way are more than welcome.
@@ -23,7 +21,7 @@ The definition of value and resources is very dependent on the field of applicat
 
 ### Back to the source
 
-As usual in the *Impractical Engineer* series, we want to ground ourselves on the foundational concepts. The definition of *Performance* by [Merriam-Webster, fourth meaning](https://www.merriam-webster.com/dictionary/performance) refers itself to [Perform](https://www.merriam-webster.com/dictionary/perform), which gives us the baseline for the context of performance measurement:
+The definition of *Performance* by [Merriam-Webster, fourth meaning](https://www.merriam-webster.com/dictionary/performance) refers itself to [Perform](https://www.merriam-webster.com/dictionary/perform), which gives us the baseline for the context of performance measurement:
 
 1. Carry out something, typically a task or jobs.
 2. Adhering to terms (as in a contract) and expected results
