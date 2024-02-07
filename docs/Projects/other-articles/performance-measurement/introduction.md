@@ -78,12 +78,7 @@ Based on this model, both Effectiveness and Efficiency can be further refined in
 - `Processing Time` is the time a job spends between their start event and their completion event.
 - `Lead Time` is the total time between the arrival of a Job and its completion event. It is important to qualify whether this is for all jobs or only successful ones. Lead time is the combination of `Wait time` and `Processing Time`. Its value as an indicator is to highlight the delay between the time when a commitment to spend resources is made (job arrival) and when the value associated with that job is realized.
 - `WIP` (Work in Progress): An assessment of how many jobs are simultaneously being performed by the system. It can be a simple count of *active* jobs or calculations based on other values associated with a Job like the money value of a job, the number of individual items in the job (e.g. how many items in a shopping order), etc. As an indicator, it is a direct measure of how much value is *trapped* in the system at a particular point in time.
-
-for Effectiveness and 
-
 - `Resource Usage per unit of Yield`: Usage of a specific kind of resource used either in the period or for a job. For simplicity, in the diagram above, there is no detail on the lifecycle of resources, but typically they have a *Consumption Event* with an associated time when a quantity of the resource is consumed (if it is discrete) or a *Consumption Rate* for continuous consumption (e.g. electricity)
-
-for Efficiency
 
 As mentioned before, this is a very simplified model of system operation, but it provides enough elements to define the fundamentals of observation and measurement and captures the essence of operations for a very broad range of business and technical processes, a very short list of very common applications of this model include:
 
