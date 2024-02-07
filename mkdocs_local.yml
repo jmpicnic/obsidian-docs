@@ -55,10 +55,13 @@ markdown_extensions:
   - footnotes
   - nl2br
   - attr_list
-  - sane_lists
+  - md_in_html
   - meta
   - smarty
   - tables
+  - mdx_truly_sane_lists:
+      nested_indent: 2
+      truly_sane: True
   - mdx_breakless_lists
   - def_list
   - pymdownx.arithmatex:
