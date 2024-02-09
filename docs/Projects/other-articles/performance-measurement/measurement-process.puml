@@ -1,0 +1,22 @@
+@startuml (id=MEASUREMENT_PROCESS)
+title
+= The Measurement Process
+end title
+
+!include style.ipuml
+
+person "Decision\nMaker" as DM
+database History
+collections Reports
+frame "Metrics" as Metrics
+control Measurements
+node "System under\nObservation" as SUO {
+  port Signal
+}
+
+DM <--( Reports: Present
+Reports <--( Metrics: Format
+Metrics <-> History: store
+Metrics <--( Measurements: Compute
+Measurements <--( Signal: Sample
+@enduml

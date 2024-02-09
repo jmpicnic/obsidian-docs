@@ -4,6 +4,8 @@ INHERIT: mkdocs_local.yml
 markdown_extensions:
   # Need one to make Inherit work O.K.
   mdx_truly_sane_lists:
+    nested_indent: 2
+    truly_sane: True
   pymdownx.arithmatex:
     generic: true
   plantuml_markdown:

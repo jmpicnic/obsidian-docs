@@ -10,6 +10,7 @@ title: The Drunk, their keys and a lamp post
 The story goes like this. A drunk is searching for something at night around a lamp post. A passerby, seeing the distress, starts a conversation trying to help.
 
 ![Image from https://sketchplanations.com/looking-under-the-lamppost](assets/looking_under_lamppost.png){width="40%", align=left}
+
 &larr; *What are you looking for? Can I help?*
 &rarr; *I am looking for my keys but I can't find them.*
 &larr; *I'll help you look for them, where did you lose them?*
