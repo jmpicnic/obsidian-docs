@@ -16,3 +16,5 @@ markdown_extensions:
 plugins:
   - blog:
       draft: false
+  - glightbox:
+      auto_caption: true
