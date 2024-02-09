@@ -4,24 +4,33 @@ Copyright: (c) Miguel Pinilla, All rights reserved
 License: "This work is licensed under the Creative Commons License CC BY-NC-SA 4.0: https://creativecommons.org/licenses/by-nc-sa/4.0/"
 email: miguel.pinilla@saldubatech.com
 share: true
-title: The Impractical Engineer: Defining Performance Measurement
+title: The Drunk, their keys and a lamp post
 ---
 
-This article aims to give a brief but rigorous overview of how to understand and approach Performance Measurement in a way that can be applied to many different fields. To keep the article short and concise, many details and other interesting topics have been left out, with the intent of exploring them in follow up articles, like how to use these metrics for control or decision making and when it is preferable to measure outcomes vs. observing signals internal to the system itself, etc...
+The story goes like this. A drunk is searching for something at night around a lamp post. A passerby, seeing the distress, starts a conversation trying to help.
 
-In keeping with the *Impractical Engineer* spirit of the series, I have made an effort to ground the writing in first principles and make as few assumptions as possible. Any feedback on how to improve in any way are more than welcome.
+![Image from https://sketchplanations.com/looking-under-the-lamppost](assets/looking_under_lamppost.png){width="40%", align=left}
+&larr; *What are you looking for? Can I help?*
+&rarr; *I am looking for my keys but I can't find them.*
+&larr; *I'll help you look for them, where did you lose them?*
+&rarr; *I lost them over there in that bush.*
+&larr; *Hmm, why are you looking for them here then?*
+&rarr; *There is no light over there, I won't see them, Duh!*
+<br><br>
 
-## The goals of performance measurement
+What makes this joke funny is not that we laugh at a hapless drunk, but rather that we see ourselves somewhat reflected in the drunk's predicament.
 
-### What do we mean by Performance Measurement?
+With measurement, and in particular with performance measurement, we are like the drunk in the story, looking for *easy* indicators and metrics instead of looking for those that will actually lead to good decisions and results. How can we otherwise explain the prevalence of trying to measure productivity by lines of code or number of pull requests, employee's performance by number of hours in the office, health of an economy through their stock market and endless of other cases of misuse of indicators. The only difference with the story is that both the metrics involved and the result we seek are more sophisticated or complex than simple keys and light.
 
-In business or engineering the drive to measure performance for a system or organization is to inform decisions on how to operate it, or what changes need to be made to get the maximum possible value in exchange for the resources consumed. This seemingly foolproof formulation kicks the can down the road by not defining what are *value* and *resources* and what observations will accurately represent the value produced and the resources consumed.
+In business or engineering the drive to measure performance for a system or organization is to inform decisions on how to operate it, or what changes need to be made to get the maximum possible value in exchange for consumed resources. The need to support decision making should make us very wary of lamppost situations and not be happy with whatever data is readily available without making sure that it does represent the outcomes that we want to control.
 
-The definition of value and resources is very dependent on the field of application. Some fields, like chemical plants can define it very clearly based on the volume or weight of products and reactants, while in others, like design or engineering activities, both the value and the resources are much harder to define and measure. They are sometimes measured by *story points*, design artifacts, hours of engineering, etc... There plenty of literature in different fields addressing this problem. In this article we are after a more modest goal to frame a systematic way to approach the measurement problem itself, provided that the value and resources definitions are clear, and that there are available signals that accurately represent them.
+The seemingly foolproof formulation of *maximum value in exchange for consumed resources* kicks the can down the road by not defining what *value* and *resources* are, and what observations will accurately represent the value produced and the resources consumed.
 
-### Back to the source
+Definition of value and resources is very dependent on the field of application. Some industries, like chemical production, can define it very clearly based on the volume or weight of products and reactants, while in others, like design or engineering activities, both the value and the resources are much harder to define and measure. They are sometimes measured by *story points*, design artifacts, hours of engineering, etc... There are reams of literature in different fields addressing this problem. In this article we are after the more modest goal to outline a systematic way to approach the measurement problem itself, with a general formulation of value and resources that can be mapped and refined in specific fields.
 
-The definition of *Performance* by [Merriam-Webster, fourth meaning](https://www.merriam-webster.com/dictionary/performance) refers itself to [Perform](https://www.merriam-webster.com/dictionary/perform), which gives us the baseline for the context of performance measurement:
+## Back to Basics
+
+In keeping with the spirit of the *Impractical Engineer*, the definition of *Performance* by [Merriam-Webster, fourth meaning](https://www.merriam-webster.com/dictionary/performance) refers itself to [Perform](https://www.merriam-webster.com/dictionary/perform), which gives us the baseline for the context of performance measurement:
 
 1. Carry out something, typically a task or jobs.
 2. Adhering to terms (as in a contract) and expected results
@@ -173,3 +182,13 @@ Wait Time, Lead Time, Processing Time
 
 Resources Consumed
 : Although the specifics of resource consumption depend a lot on the particular application, all applications share the fact that the maximum throughput of the system is limited by the capacity of its *bottleneck*. Based on this Capacity, we can define the metric of *Utilization* with is simply the Throughput expressed as a fraction of the maximum throughput.
+
+## Follow up
+
+We have tried to provide an introduction and summary of the core concepts to build a performance measurement system, we will be providing more details in other articles about:
+
+* Mechanics and math of Measurements and Metrics
+* An extended system model and how to use it to pick metrics to support decisions
+* An example of application to API Endpoint Observability
+
+Stay tuned.
