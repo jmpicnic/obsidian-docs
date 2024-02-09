@@ -16,6 +16,8 @@ The story goes like this. A drunk is searching for something at night around a l
 &rarr; *I lost them over there in that bush.*
 &larr; *Hmm, why are you looking for them here then?*
 &rarr; *There is no light over there, I won't see them, Duh!*
+
+
 <br><br>
 
 What makes this joke funny is not that we laugh at a hapless drunk, but rather that we see ourselves somewhat reflected in the drunk's predicament.
