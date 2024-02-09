@@ -1,0 +1,46 @@
+@startuml (id=OBSERVABLE_SYSTEM)
+
+!include style.ipuml
+
+skinparam ranksep 20
+
+left to right direction
+
+control "Inputs\n(Jobs)" as Inputs
+
+rectangle Outputs
+rectangle Scrap
+
+
+together {
+  rectangle Resources
+  together {
+    (arrival\ntime) as arrT
+    (start\ntime) as stT
+    (completion\ntime) as cT
+    arrT -[hidden]-- stT
+    stT -[hidden]-- cT
+  }
+together {
+  queue waiting
+  rectangle "\nSystem\nunder\nObservation" as SUO {
+    portin accept
+    portout done
+  }
+  circle entry as c1
+  hexagon check as c2
+  c1 --> waiting
+  waiting --> accept
+  done --> c2
+  }
+  SUO <-r- Resources
+}
+Inputs --> c1
+c2 --> Scrap: unsuccessful
+c2 --> Outputs: successful
+
+arrT -> c1
+stT -> accept
+cT -> done
+
+@enduml

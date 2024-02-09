@@ -1,0 +1,39 @@
+@startuml (id=CONTROLLABLE_SYSTEM)
+
+together {
+ !include ../../Projects/other-articles/performance-measurement/system-model.puml!OBSERVABLE_SYSTEM
+ Outputs -[hidden] Scrap
+}
+
+skinparam nodesep 10
+skinparam ranksep 30
+
+rectangle . {
+  rectangle Metrics
+  agent Decision
+  Metrics --> Decision
+}
+
+
+label "|" as AA
+label "|" as BB
+label "|" as CC
+control "actions" as DD
+
+AA .[hidden].. BB
+BB .[hidden].. CC
+DD -> SUO
+
+Decision -[norank]> DD
+
+
+Metrics <.[norank] AA
+Metrics <. BB
+Metrics <.[norank] CC
+
+
+AA . arrT
+BB . stT
+CC . cT
+
+@enduml
