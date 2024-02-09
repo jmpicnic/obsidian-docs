@@ -7,6 +7,8 @@ share: true
 title: The Drunk, their keys and a lamp post
 ---
 
+## A Tale of Observability and Performance Measurement?
+
 The story goes like this. A drunk is searching for something at night around a lamp post. A passerby, seeing the distress, starts a conversation trying to help.
 
 ![Image from https://sketchplanations.com/looking-under-the-lamppost](assets/looking_under_lamppost.png){width="40%", align=left}
@@ -23,13 +25,13 @@ The story goes like this. A drunk is searching for something at night around a l
 
 What makes this joke funny is not that we laugh at a hapless drunk, but rather that we see ourselves somewhat reflected in the drunk's predicament.
 
-With measurement, and in particular with performance measurement, we are like the drunk in the story, looking for *easy* indicators and metrics instead of looking for those that will actually lead to good decisions and results. How can we otherwise explain the prevalence of trying to measure productivity by lines of code or number of pull requests, employee's performance by number of hours in the office, health of an economy through their stock market and endless of other cases of misuse of indicators. The only difference with the story is that both the metrics involved and the result we seek are more sophisticated or complex than simple keys and light.
+With measurement, and in particular with performance measurement, we are like the drunk in the story, lulled into the comfort of thinking that we are doing the right thing by the plethora of shiny tools that is available to us, with out-of-the-box reports, packaged best practices and flashy dashboards. We need to ask ourselves if we are like the drunk of the story, just looking where the tools shine a light rather than looking for the metrics that will actually lead to good decisions and results. How can we otherwise explain the prevalence of trying to measure productivity by lines of code or number of pull requests, employee's performance by number of hours in the office, health of an economy through their stock market and endless of other cases of misuse of indicators. The only difference with the story is that the tools are more expensive than a lamp post and what we are looking for is harder to define that a set of keys.
 
 In business or engineering the drive to measure performance for a system or organization is to inform decisions on how to operate it, or what changes need to be made to get the maximum possible value in exchange for consumed resources. The need to support decision making should make us very wary of lamppost situations and not be happy with whatever data is readily available without making sure that it does represent the outcomes that we want to control.
 
-The seemingly foolproof formulation of *maximum value in exchange for consumed resources* kicks the can down the road by not defining what *value* and *resources* are, and what observations will accurately represent the value produced and the resources consumed.
+The seemingly foolproof formulation of maximum value in exchange for consumed resources kicks the can down the road by not defining what value and resources are, and what observations will accurately represent the value produced and the resources consumed.
 
-Definition of value and resources is very dependent on the field of application. Some industries, like chemical production, can define it very clearly based on the volume or weight of products and reactants, while in others, like design or engineering activities, both the value and the resources are much harder to define and measure. They are sometimes measured by *story points*, design artifacts, hours of engineering, etc... There are reams of literature in different fields addressing this problem. In this article we are after the more modest goal to outline a systematic way to approach the measurement problem itself, with a general formulation of value and resources that can be mapped and refined in specific fields.
+Definition of value and resources is very dependent on the field of application. Some industries, like chemical production, can define it very clearly based on the volume or weight of products and reactants, while in others, like design or engineering activities, both the value and the resources are much harder to define and measure. They are sometimes measured by story points, design artifacts, hours of engineering, etc… There are reams of literature in different fields addressing this problem. In this article we are after the more modest goal to outline a systematic way to approach the measurement problem itself, with a general formulation of value and resources that can be mapped and refined in specific fields.
 
 ## Back to Basics
 
@@ -51,10 +53,10 @@ Despite these limitations, these concepts, and the framework that derives from t
 There are two aspects of Performance commonly considered.
 
 Effectiveness
-: How well is are jobs performed against the given terms. That is how much or little the results of the job deviate from the expectations/terms.
+: How well are jobs performed against the given terms. That is, how much or little the results of the job deviate from the expectations/terms.
 
 Efficiency
-: How many and what kind of resources are used in completing the jobs. Similarly, there may be expectations (terms) on the quantity and type of resources used that are considered when evaluating performance.
+: How many and what kinds of resources are used in completing the jobs. Similarly, there may be expectations (terms) on the quantity and type of resources used that are considered when evaluating performance.
 
 The immediate goal of Performance Measurement is to define and obtain metrics that allow to observe and evaluate the performance of a system (people, machines or combinations of both) when executing a task. Evaluation of performance in turn has an ultimate goal to understand the behavior of the system and be able to control and improve it by effecting changes in it.
 
@@ -63,16 +65,18 @@ The immediate goal of Performance Measurement is to define and obtain metrics th
 To bridge the gap from the previous definitions to an actionable formulation of performance metrics we need to:
 
 1. Adopt a model of the system that we intend to measure so that we can define how to observe it and make the definition of jobs, resources and results concrete and measurable.
-2. Have a clear picture of the measurement process, that is, how to go from observations of the system to a set of metrics and indicators that faithfully represent the performance behavior of the system.
+2. Have a clear picture of the measurement process, that is, how to go from observations of the system to a set of metrics and indicators that faithfully represent the performance behavior of the system and support decision making.
 3. Define what specific observations and calculations on them will be implemented in the measurement process.
 
 ### System Model and Performance Indicators
 
-The `System` to be measured and controlled performs `Jobs` that are presented to it as `Inputs` through a `waiting queue` and deliver the results of its activity as `outputs` if they meet the expected terms, or rejected as `scrap` if they don't meet the expected terms. The `System` consumes `Resources` to perform the jobs in its input queue.
+Starting with a somewhat contrived statement to guide us in defining a system model, we can say:
 
-The delivery of value is a function of the jobs successfully completed. The simplest interpretation is to assign a constant, uniform value to all jobs completed with more sophisticated models will evaluate it based on domain dependent characteristics of the completed jobs. In Agile software engineering this would be equivalent to assigning value based on the raw number of *stories* completed vs. the sum of their *story points*.
+> The `System` to be measured and controlled performs `Jobs` that are presented to it as `Inputs` through a `waiting queue` and deliver the results of its activity as `outputs` if they meet the expected terms, or rejected as `scrap` if they don't meet the expected terms. The `System` consumes `Resources` to perform the jobs in its input queue.
 
-Value is then associated to how many jobs are completed in a unit of time, and how quickly a job is completed from start to finish.
+The delivery of value follows the jobs successfully completed. The simplest interpretation is to assign a constant, uniform value to all jobs completed. More sophisticated models may evaluate value based on domain dependent characteristics of the completed jobs. In Agile software engineering this would be equivalent to assigning value based on the raw number of *stories* completed vs. the sum of their *story points*.
+
+Value can then be measured by how many jobs are successfully completed in a unit of time, and how quickly a job is completed from start to finish.
 
 A very simplified system model can be represented graphically as a *job flow* diagram:
 
@@ -80,7 +84,7 @@ A very simplified system model can be represented graphically as a *job flow* di
 !include ../../Projects/other-articles/performance-measurement/system-model.puml!OBSERVABLE_SYSTEM
 ```
 
-Where *jobs* are generated in an external *Input* process and arrive to the system through an *entry* point. Jobs wait in a queue until the system *accepts* them to work on them. The System consumes *Resources* working on jobs and delivers jobs when each of them is *done*. Jobs that are *done* can be successful (matching the terms and expected results) or not. This is determined by a *check* that, for the purposes of this model is instantaneous and does not consume resources. Note that any time or resources consumed by the check can be bundled in the general processing of a job within the system. The *check* determines whether each job is successful (an *output* of the system) or not (the system producing *scrap* that can be considered of no value for the purposes of this simplified model).
+*Jobs* are generated by an external *Input* process and arrive to the system through an *entry* point. Jobs wait in a queue until the system *accepts* them to work on them. The System consumes *Resources* working on jobs and delivers jobs when each of them is *done*. Jobs that are *done* can be successful (matching the terms and expected results) or not. This is determined by a *check* that, for the purposes of this model is instantaneous and does not consume resources. Note that any time or resources consumed by the check can be bundled in the general processing of a job within the system. The *check* determines whether each job is successful (an *output* of the system) or not (the system producing *scrap* that can be considered of no value for the purposes of this simplified model).
 
 Based on this model, both Effectiveness and Efficiency can be further refined into performance indicators like:
 
@@ -92,10 +96,10 @@ Based on this model, both Effectiveness and Efficiency can be further refined in
 - `WIP` (Work in Progress): An assessment of how many jobs are simultaneously being performed by the system. It can be a simple count of *active* jobs or calculations based on other values associated with a Job like the money value of a job, the number of individual items in the job (e.g. how many items in a shopping order), etc. As an indicator, it is a direct measure of how much value is *trapped* in the system at a particular point in time.
 - `Resource Usage per unit of Yield`: Usage of a specific kind of resource used either in the period or for a job. For simplicity, in the diagram above, there is no detail on the lifecycle of resources, but typically they have a *Consumption Event* with an associated time when a quantity of the resource is consumed (if it is discrete) or a *Consumption Rate* for continuous consumption (e.g. electricity)
 
-As mentioned before, this is a very simplified model of system operation, but it provides enough elements to define the fundamentals of observation and measurement and captures the essence of operations for a very broad range of business and technical processes, a very short list of very common applications of this model include:
+Despite this being a very simplified model of system operation, it provides enough elements to define the fundamentals of observation and measurement and captures the essence of operations for a very broad range of business and technical processes, a very short list of very common applications of this model include:
 
 Call Centers
-: The jobs here are incoming calls, the execution of the job is to respond to customers questions or requests, If the customer is satisfied, it is a successful outcome otherwise it is considered scrap.
+: Jobs here are incoming calls, the execution of the job is to respond to customers questions or requests, If the customer is satisfied, it is a successful outcome otherwise it is considered scrap.
 
 Telecommunication Systems
 : Jobs are either connection requests or data packets to be routed.
@@ -103,7 +107,7 @@ Telecommunication Systems
 Supermarket Cashiers, Coffee shops, etc...
 : Jobs are customer checkouts or services to render (serving coffee)
 
-API Calls for information systems
+API Calls in information systems
 : Jobs are API requests that can succeed or fail and take a time to produce a response (output) or an error (scrap)
 
 Software or Engineering Design Teams
@@ -117,9 +121,11 @@ Manufacturing Processes
 
 ## The Measurement Process
 
-The definition of Indicators is a strong starting point, but they are not yet actionable to implement a performance measurement program. To do this, we need to define measurements and metrics, and the process to obtain them. To really understand what we are doing when implementing a performance measurement system, we need to lay the foundation of measurements, metrics, etc...
+The definition of Indicators is a strong starting point, but they are not yet actionable to implement a performance measurement program. We still need to define measurements and metrics, and the process to obtain them. To really understand what we are doing when implementing a performance measurement system, we need to lay the foundation of measurements, metrics, etc.
 
-A [measurement](https://en.wikipedia.org/wiki/Measurement) is the *quantification of attributes of an object or event*. Measurements are obtain through by assigning numbers or other symbols to observed phenomena following a consistent set of rules.
+Resorting again to standard definitions, this time from Wikipedia:
+
+> A [measurement](https://en.wikipedia.org/wiki/Measurement) is the *quantification of attributes of an object or event*. Measurements are obtain through by assigning numbers or other symbols to observed phenomena following a consistent set of rules.
 
 In the context of performance measurement, we will use a narrower definition for measurement and complement it with other concepts to better structure the measurement process:
 
@@ -133,9 +139,9 @@ Metric
 : A Calculation based on one or multiple measurements that generates a value (a number or other symbol) that provides quantitative information about an Indicator.
 
 Metric Presentation & Evolution
-: The presentation of how a metric changes over time to the end users that need to exercise judgments and actions based on the values of the indicator metrics.
+: The presentation of how a metric changes over time to the end users that need to make decisions and take actions based on the values of the indicator metrics.
 
-Signals, Measurements and Metrics take place within the passage of time and, although theoretically some could be considered *instantaneous* or *continuous*,in any practical implementation, they all take a duration, or can happen only at particular moments in time. The calculations and presentation of measurements and metrics need to take this into account and convey the information about the time when signals are observed, what periods of observation are used for calculations and the overall period that a particular report or graph represent.
+Signals, Measurements and Metrics take place within the passage of time and, although theoretically some could be considered *instantaneous* or *continuous*, in any practical implementation, they all take a duration or can only happen at particular moments in time. The calculations and presentation of measurements and metrics need to take this into account and convey the information about the time when signals are observed, what periods of observation are used for calculations and the overall period that a particular report or graph represent.
 
 ## Performance Measurements and Metrics
 
@@ -148,11 +154,11 @@ The measurements that we can take from a system represented by the model above a
   - Number unsuccessful jobs in the period
 
 - *Throughput*
-  - The same measuremetns as for *Yield*
+  - The same measurements as for *Yield* and
   - Number of Jobs arriving to the system in the period
   - Number of Jobs started processing in the system)
 
-- *WIP*
+- *Work In Progress (WIP)*
   - The number of jobs present in the system at the beginning or end of the sampling period. It is important to pick one of the two points and be consistent about using it to take measurements.
   - The number of jobs concurrently being processed by the system (jobs that have started by not completed)
   - The number of jobs waiting to start processing
@@ -174,7 +180,7 @@ Yield
 : Yield metrics are computed based on the Yield measurements for the period, the percentage of failures with respect to all completed jobs, $yield = N(unsuccessful) / N(successful)$
 
 Throughput
-: Throughput metrics tend to follow closely the measurements defined above. Throughput metrics introduce and additional consideration of "reference" levels chosen based on the intended use of the metric:
+: Throughput metrics tend to follow closely the measurements defined above. Throughput metrics introduce and additional consideration of *reference* levels chosen based on the intended use of the metric:
 
 - Target goals (e.g. desired visitors to a commerce web site) to measure business performance against expectations.
 - A statistic computed over longer periods, typically the historical average or a high percentile (e.g. p80, p90) to detect trends or changes in the behavior of the system or job arrival.
@@ -185,6 +191,10 @@ Wait Time, Lead Time, Processing Time
 
 Resources Consumed
 : Although the specifics of resource consumption depend a lot on the particular application, all applications share the fact that the maximum throughput of the system is limited by the capacity of its *bottleneck*. Based on this Capacity, we can define the metric of *Utilization* with is simply the Throughput expressed as a fraction of the maximum throughput.
+
+With these metrics, the last step is to define how they will be displayed to the users, typically in the form of visual information like the ones used in Statistical Process Control that we'll dig into in a follow up post.
+
+![From: https://www.flickr.com/photos/93642218@N07/8637804092](assets/spc_chart.png)
 
 ## Follow up
 
