@@ -5,6 +5,7 @@ Pipfile.lock
 longform-sessions.json
 
 site/
+scratch/
 
 ## Python compiled files
 

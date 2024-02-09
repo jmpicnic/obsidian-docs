@@ -51,6 +51,7 @@ exclude_docs: |
 
 
 # Extensions
+# IMPORTANT: KEEP IN SYNC WITH mkdocs.yml EXCEPT THE PLANTUML JAR LOCATION
 markdown_extensions:
   - footnotes
   - nl2br
@@ -98,7 +99,7 @@ markdown_extensions:
 #      server: 'https://plantuml.com/plantuml'
 #      server: ''
 #      kroki_server: ''
-      plantuml_cmd: 'java -DPLANTUML_SECURITY_PROFILE=UNSECURE -DPLANTUML_LIMIT_SIZE=8192 -Dplantuml.include.path="docs/Projects:docs/assets/plantuml:docs" -Djava.awt.headless=true -jar /opt/homebrew/Cellar/plantuml/1.2023.13/libexec/plantuml.jar'
+      plantuml_cmd: 'java -DPLANTUML_SECURITY_PROFILE=UNSECURE -DPLANTUML_LIMIT_SIZE=8192 -Dplantuml.include.path="docs/Projects:docs/assets/plantuml:docs" -Djava.awt.headless=true -jar /opt/homebrew/Cellar/plantuml/1.2023.13/libexec/plantuml.jar  -config docs/assets/plantuml/config.cfg'
 
 plugins:
   - search
