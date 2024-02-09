@@ -125,45 +125,7 @@ For Metrics to be effective in supporting decisions, they obviously need to repr
 - Range: The range of variation in the metric needs to be large enough to cover most if not all operational scenarios and situations.
 
 ```plantuml
-@startuml (id=CONTROLLABLE_SYSTEM)
-
-together {
- !include ../../Projects/other-articles/performance-measurement.md!OBSERVABLE_SYSTEM
- Outputs -[hidden] Scrap
-}
-
-skinparam nodesep 10
-skinparam ranksep 30
-
-rectangle . {
-  rectangle Metrics
-  agent Decision
-  Metrics --> Decision
-}
-
-
-label "|" as AA
-label "|" as BB
-label "|" as CC
-control "actions" as DD
-
-AA .[hidden].. BB
-BB .[hidden].. CC
-DD -> SUO
-
-Decision -[norank]> DD
-
-
-Metrics <.[norank] AA
-Metrics <. BB
-Metrics <.[norank] CC
-
-
-AA . arrT
-BB . stT
-CC . cT
-
-@enduml
+!include ../../Projects/other-articles/performance-measurement/control-model.puml!CONTROLLABLE_SYSTEM
 ```
 
 ### Applications of the model
