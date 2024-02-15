@@ -14,9 +14,9 @@ node "System under\nObservation" as SUO {
   port Signal
 }
 
-DM <--( Reports: Present
-Reports <--( Metrics: Format
+DM <--( Reports: Display
+Reports <--( Metrics: Collect
 Metrics <-> History: store
 Metrics <--( Measurements: Compute
-Measurements <--( Signal: Sample
+Measurements <--( Signal: Observe and Sample
 @enduml

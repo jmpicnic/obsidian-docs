@@ -198,10 +198,10 @@ With these metrics, the last step is to define how they will be displayed to the
 
 ## Follow up
 
-We have tried to provide an introduction and summary of the core concepts to build a performance measurement system, we will be providing more details in other articles about:
+We have tried to provide an introduction and summary of the core concepts to build a performance measurement system with the intent to follow up with more details in other articles about:
 
-* Mechanics and math of Measurements and Metrics
-* An extended system model and how to use it to pick metrics to support decisions
-* An example of application to API Endpoint Observability
+- Mechanics and math of Measurements and Metrics
+- An extended system model and how to use it to pick metrics to support decisions
+- An example of application to API Endpoint Observability
 
 Stay tuned.
