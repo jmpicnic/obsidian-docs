@@ -11,7 +11,7 @@ title: The Drunk, their keys and a lamp post
 
 The story goes like this. A drunk is searching for something at night around a lamp post. A passerby, seeing the distress, starts a conversation trying to help.
 
-![Image from https://sketchplanations.com/looking-under-the-lamppost](assets/looking_under_lamppost.png){width="40%", align=left}
+![Image from https://sketchplanations.com/looking-under-the-lamppost](assets/looking-under-lamppost.png){width="40%", align=left}
 
 &larr; *What are you looking for? Can I help?*
 &rarr; *I am looking for my keys but I can't find them.*
@@ -194,14 +194,14 @@ Resources Consumed
 
 With these metrics, the last step is to define how they will be displayed to the users, typically in the form of visual information like the ones used in Statistical Process Control that we'll dig into in a follow up post.
 
-![From: https://www.flickr.com/photos/93642218@N07/8637804092](assets/spc_chart.png)
+![From: https://www.flickr.com/photos/93642218@N07/8637804092](assets/spc-chart.png)
 
 ## Follow up
 
-We have tried to provide an introduction and summary of the core concepts to build a performance measurement system, we will be providing more details in other articles about:
+We have tried to provide an introduction and summary of the core concepts to build a performance measurement system with the intent to follow up with more details in other articles about:
 
-* Mechanics and math of Measurements and Metrics
-* An extended system model and how to use it to pick metrics to support decisions
-* An example of application to API Endpoint Observability
+- Mechanics and math of Measurements and Metrics
+- An extended system model and how to use it to pick metrics to support decisions
+- An example of application to API Endpoint Observability
 
 Stay tuned.

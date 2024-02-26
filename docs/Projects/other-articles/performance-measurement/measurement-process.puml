@@ -5,18 +5,21 @@ end title
 
 !include style.ipuml
 
+left to right direction
+
 person "Decision\nMaker" as DM
 database History
 collections Reports
 frame "Metrics" as Metrics
-control Measurements
+control "Measurements" as Measurements
 node "System under\nObservation" as SUO {
-  port Signal
+  portout Signal
 }
 
-DM <--( Reports: Present
-Reports <--( Metrics: Format
-Metrics <-> History: store
-Metrics <--( Measurements: Compute
-Measurements <--( Signal: Sample
+Reports )--> DM: Display
+Metrics )--> Reports: Collect
+Metrics )-> History: Store
+Measurements )--> Metrics: Compute
+Signal )--> Measurements: Observe\n&\nSample
+
 @enduml
