@@ -11,7 +11,7 @@ title: The Drunk, their keys and a lamp post
 
 The story goes like this. A drunk is searching for something at night around a lamp post. A passerby, seeing the distress, starts a conversation trying to help.
 
-![Image from https://sketchplanations.com/looking-under-the-lamppost](assets/looking_under_lamppost.png){width="40%", align=left}
+![Image from https://sketchplanations.com/looking-under-the-lamppost](assets/looking-under-lamppost.png){width="40%", align=left}
 
 &larr; *What are you looking for? Can I help?*
 &rarr; *I am looking for my keys but I can't find them.*
@@ -194,7 +194,7 @@ Resources Consumed
 
 With these metrics, the last step is to define how they will be displayed to the users, typically in the form of visual information like the ones used in Statistical Process Control that we'll dig into in a follow up post.
 
-![From: https://www.flickr.com/photos/93642218@N07/8637804092](assets/spc_chart.png)
+![From: https://www.flickr.com/photos/93642218@N07/8637804092](assets/spc-chart.png)
 
 ## Follow up
 
