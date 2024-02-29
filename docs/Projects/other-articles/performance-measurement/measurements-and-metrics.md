@@ -9,9 +9,9 @@ title: Product & Technology Strategy Fundamentals: Metrics Mechanics and Math
 
 ## Context
 
-Measurement and metrics are essential for data driven management and operation of systems, organizations or processes.
+Measurements and metrics are essential for data driven operation and management of systems, organizations or processes.
 
-As mentioned in the introduction article to [Performance Measurement](https://jmpicnic.github.io/obsidian-docs/Projects/other-articles/performance-measurement/introduction/), sometimes decision makers don't pay enough attention to how those all important metrics are obtained and how to properly interpret them.
+As mentioned in the [introduction article to Performance Measurement](https://jmpicnic.github.io/obsidian-docs/Projects/other-articles/performance-measurement/introduction/), A common problem is that we don't pay enough attention to how those all important metrics are obtained and how to properly interpret them.
 
 The measurement process is the set of mechanisms, activities and calculations that take a system in operation and produce information to support decision making and improve the operation of the system itself.
 
@@ -30,6 +30,8 @@ Graphically:
 caption The steps to obtain reports from basic signals
 ```
 
+Starting with what reports are best to understand the performance of a system, we can then pull the thread and see what metrics and measurements a monitoring system needs to put in place and what signal should be monitored. Measurements and signals are easier to understand with an example of an API endpoint performance, including an example of how they can be implemented. From this exercise we'll be able to extract the overall structure of the measurements and metrics process so that we can apply it to other situations and domains.
+
 ## Recap of the System Model and Relevant Measurements
 
 To explore how Reports are obtained from basic signals in the four layers describe above, it is useful to recall the simplified system model in the [introduction article](https://jmpicnic.github.io/obsidian-docs/Projects/other-articles/performance-measurement/introduction/#system-model-and-performance-indicators). The summary of the model as a *Job Flow* diagram:
@@ -40,19 +42,19 @@ To explore how Reports are obtained from basic signals in the four layers descri
 
 Where the system processes jobs as they arrive, consuming resources in the process and with successful and unsuccessful outcomes. As the system is going to have some finite capacity, arriving jobs may have wait for resources to be available, in which case they would queue up before the system starts working on them.
 
-The performance of this type of systems can be characterized by:
+The performance of this type of systems can be characterized along multiple dimensions, each of them with their corresponding indicators:
+
+- *Throughput & Utilization*
+  - Number of Jobs completed by the system in a period
+  - Number of Jobs arriving to the system in the period (obviously, over a long period, this will be the same as the completion rate unless there is significant accumulation of work in progress)
+  - Number of Jobs started processing in the system
+  - Utilization is simply an alternative expression of Throughput with its values normalized against a given *Capacity* which is intended to represent the maximum achievable throughput.
 
 - *Yield*
   - Number of jobs successfully completed in the period
   - Number unsuccessful jobs in the period
 
-- *Throughput & Utilization*
-  - The same measurements as for *Yield*
-  - Number of Jobs arriving to the system in the period
-  - Number of Jobs started processing in the system
-  - Utilization is equivalent to Throughput with its values normalized against a given *Capacity* which is intended to represent the maximum achievable throughput.
-
-- *WIP*
+- *Work In Progress (WIP)*
   - The number of jobs present in the system at the beginning or end of the sampling period. It is important to pick one of the two points and be consistent about using it to take measurements.
   - The number of jobs concurrently being processed by the system (jobs that have started by not completed)
   - The number of jobs waiting to start processing
@@ -72,15 +74,32 @@ Reports are directly consumed by decision makers, so they need to be concise, un
 
 There are several core principles shared by effective reports:
 
-- They avoid decorations that don't directly convey information or that are redundant with other elements.
+- Avoid decorations that don't directly convey information or that are redundant with other elements.
 - Provide enough context to interpret them, for example by adding min-max ranges or markers for special conditions that require attention.
 - Use visual clues to aid in the interpretation, for example providing trend lines that clarify otherwise noisy data.
 - Avoid unnecessary variations across different reports in a report family. Use consistent styles and colors to minimize the cognitive load on the decision maker and allow them to concentrate on the interpretation of the reports rather than style elements.
-- Provide quantitative information to aid interpreting the report when compared with other data or reports obtained independently. Axis should be labeled and scaled properly, time frames clearly visible and information about the report itself be available on demand (e.g when was the report produced, by who and what tools where used). Ideally, in our world of instant information access, all the data and computations used to produce the report are accessible as advocated by [Professor Donoho](https://statistics.stanford.edu/people/david-donoho) in his [Reproduicble Research in the Mathematical Sciences](https://stodden.net/papers/PCAM_20140620-VCS.pdf) paper.
+- Provide quantitative information to aid interpreting the report when compared with other data or reports obtained independently. Axes should be labeled and scaled properly, time frames clearly visible and information about the report itself be available on demand (e.g when was the report produced, by who and what tools where used). Ideally, in our world of instant information access, all the data and computations used to produce the report are accessible as advocated by [Professor Donoho](https://statistics.stanford.edu/people/david-donoho) in his [Reproducible Research in the Mathematical Sciences](https://stodden.net/papers/PCAM_20140620-VCS.pdf) article.
 
-The performance characteristics described in the previous section can be made concrete with a set of graphical reports that follow these principles. The specific values in the examples below are generated by using a simple [G/G/k Queue](https://en.wikipedia.org/wiki/Kendall%27s_notation) simulator that can be found as a [Jupyter Notebook](https://jupyter.org/) and associated python files in Github at [perf_measurements.ipynb](https://github.com/jmpicnic/jupyter-notebooks/blob/main/perf_measurements.ipynb)
+The performance characteristics described in the previous section can be made concrete with a set of graphical reports that follow these principles. The specific values in the examples below are generated by using a simple [G/G/k Queue](https://en.wikipedia.org/wiki/Kendall%27s_notation) simulator that can be found as a [Jupyter Notebook](https://jupyter.org/) and associated Python files in Github at [perf_measurements.ipynb](https://github.com/jmpicnic/jupyter-notebooks/blob/main/perf_measurements.ipynb)
 
-For these examples, times are an arbitrary unit, different applications may user different units (e.g. milliseconds for API performance, hours for e-commerce fulfillment, ...). Each report covers a time period of observations of the system.
+For these examples, ticks are an arbitrary unit of time, different applications may user different units (e.g. milliseconds for API performance, hours for e-commerce fulfillment, ...). Each report instance will cover a given time period of observations of the system.
+
+### Throughput Report
+
+Throughput shows the amount of output produced by the system in the period. In these examples, it is simply represented by the number of tasks completed in the period. If the value from each task varies from task to task, this can be replaced by a sum of the values of tasks completed during the period.
+
+![Throughput Report](assets/throughput-report.png){: width=67%}
+
+The report provides:
+
+- A title that identifies the information presented (Yield) and the time of the report (Period2). In real applications, the identification of the system (e.g. an API name) would be provided and the period would be a calendar identification.
+- The horizontal axis in this case is labeled simply with the `clock tick` value of the simulation, with the scale showing `M` to indicate millions of ticks. In real life, this would be a date-time value, ideally with additional context (e.g. the year for a month report or the timezone for time-of-day centered reports)
+- The *control* levels in this case are given by the P5 and P95 percentiles to show an alternative use of these visual elements. In the case of throughput, both values are significative, so both are included in the report. Using percentile control levels provides information relevant to SLA commitments that are sometimes expressed in those statistics.
+- The vertical axis represents the number of jobs completed per tick (unit of time). In this case with the letter `m` to indicate thousandths of a job.
+
+The lower chart shows a histogram distribution of the throughput values during the period. In the case of throughput and other indicators, variability is as important, if not more important than the average value. Presenting the statistical distribution of values gives the users valuable information on the behavior of the system, particularly when used in combination with yield or other quality reports. The vertical axis can be labeled with the raw count of instances that fall in each bin (Frequency) or alternatively with a percentage of the total number of occurrences in the report.
+
+Distribution information can also be computed for each point in the report, as its value is itself computed from multiple measurements as we will see later. In this case, [Candlestick Charts](https://en.wikipedia.org/wiki/Candlestick_chart) similar to those used in stock pricing can be used, being careful to not overload a single chart with too much information that would make it too noisy.
 
 ### Yield/Availability-Reliability Reports
 
@@ -92,57 +111,38 @@ An example report is:
 
 This report provides the following information:
 
-- `Yield`: The percentage of success at specific points of time, computed as the number of jobs completed in a given period that ends at the time point represented in the report.
+- `Yield`: The percentage of success at specific points of time, computed as the number of jobs completed in a given period that ends at the time point represented in the report. The vertical axis is labeled with the actual values of the Yield percentage, making it explicit that the scale is not grounded in *0%*.
 - `Average`: The average of the Yield over the complete reporting period to serve as a macro-value to anchor the report. This value can also be substituted by a linear or higher order curve fit (see example in the [Lead Time vs Throughput](#lead-time-vs-throughput) report below) to show macro time trends in the data.
 - `Min Required`: A policy set value of what is the required level of performance for the Yield in this system, providing context for the decision maker. Note that in the case of yield, the maximum achievable is 100%, so no *upper control* is needed. In other reports, like the ones below, both a lower and a higher control levels maybe used.
 - `Violations`: Point markers to visually draw attention of the decision maker to specific points that lay out of the acceptable results.
 
-In addition, the report provides:
-
-- A title that identifies the information presented (Yield) and the time of the report (Period2). In real applications, the identification of the system (e.g. an API name) would be provided and the period would be a calendar identification.
-- The vertical axis is labeled with the actual values of the Yield percentage, making it explicit that the scale is not grounded in *0%*.
-- The horizontal axis in this case is labeled simply with the `clock tick` value of the simulation, with the scale showing `M` to indicate millions of ticks. In real life, this would be a date-time value, ideally with additional context (e.g. the year for a month report or the timezone for time-of-day centered reports)
+In the case of yield, the values on the vertical axis are adimensional percentages.
 
 Reliability or Availability reports are very similar to Yield reports, but applied to a continuous output. The only difference is in the calculation of the percentage values in the report. In the case of continuous processes, the percent is computed by taking the quantity of acceptable product (or time in the case of pure reliability reports) against the total production of the period represented by the data point.
 
-### Throughput Report
-
-Throughput shows the amount of output produced by the system in the period. In these examples, it is simply represented by the number of tasks completed in the period. If the value from each task varies from task to task, this can be replaced by a sum of the values of tasks completed during the period.
-
-![Throughput Report](assets/throughput-report.png)
-
-The top chart is very similar in appearance to the yield report, with differences worth noting:
-
-- In the case of yield, the values are adimensional percentages. In this case vertical axis needs to be labeled with the units in which throughput is expressed. In this case, jobs with the scale showing `m` to indicate `millis`, that is a thousandth of a job completed in each tick.
-- The *control* levels in this case are given by the P5 and P95 percentiles to show an alternative use of these visual elements. In the case of throughput, both values are significative, so both are included in the report. Using percentile control levels provides information relevant to SLA commitments that are sometimes expressed in those statistics.
-
-The lower chart shows a histogram distribution of the throughput values during the period. In the case of throughput and other indicators, variability is as important, if not more important than the average value. Presenting the statistical distribution of values gives the users valuable information on the behavior of the system, particularly when used in combination with yield or other quality reports. The vertical axis can be labeled with the raw count of instances that fall in each bin (Frequency) or alternatively with a percentage of the total number of occurrences in the report.
-
-Distribution information can also be computed for each point in the report, as its value is itself computed from multiple measurements as we will see later. In this case, [Candlestick Charts](https://en.wikipedia.org/wiki/Candlestick_chart) similar to those used in stock pricing can be used, being careful to not overload a single chart with too much information that would make it too noisy.
-
 ### Time Reports
 
-The service times indicators are all similar, taking the Lead Time as the example, the associated reports can be made almost identical to the Throughput ones:
+The service times indicators are all similar. Taking the Lead Time as the example, the associated reports can be made almost identical to the Throughput ones:
 
-![Lead Time Report](assets/lead-time-report.png)
+![Lead Time Report](assets/lead-time-report.png){: width=67%}
 
 The vertical scale in the timeline chart and the horizontal scale in the histogram are in time units (simulation ticks in the example). For service time reports, the control levels can represent directly externally defined service goals or percentiles of the data as information provided to the decision makers.
 
 ### Work In Progress (WIP) Report
 
-Work In Progress follows the same pattern, with the units being the count of jobs currently in the system. Similarly to Througput reports, the simple count of jobs can be replaced by the sum of the value assigned to each job or other dimensions like the expected time or cost to process them.
+Work In Progress follows the same pattern, with the units being the count of jobs currently in the system. Similarly to Throughput reports, the simple count of jobs can be replaced by the sum of the value assigned to each job or other dimensions like the expected time or cost to process them.
 
-![WIP Report](assets/wip-report.png)
+![WIP Report](assets/wip-report.png){: width=67%}
 
 ### Correlation Reports
 
-The reports described so far show the evolution of a metric of the system against time or a statistic (the distribution histogram) of that dimension. To understand the behavior of the system it is also useful to directly report on some relationships between dimensions. For dynamic systems, two reports offer particular insights.
+The reports described so far show the evolution of a metric of the system against time or a statistic (the distribution histogram) of that dimension. To understand the behavior of the system it is also useful to directly report relationships between two different metrics. For dynamic systems, two reports offer particular insights.
 
 #### Lead Time vs. Throughput
 
-This is a key characteristic of dynamic systems. In general, the relationship is proportional to the inverse of the "spare capacity" of the system, which goes to zero as the throughput approaches the maximum that the system can support. As systems are all constrained by their resources, which imply their cost, they tend to operate at high utilization values, resulting in very high variability of lead times. As lead times are a key components in SLA's, it is particularly important to understand the actual values that the system is experiencing.
+This report helps understand the behavior of the system under different loads. This relationship is proportional to the inverse of the *spare capacity* of the system. Spare capacity which goes to zero as the throughput approaches the maximum that the system can support, driving unbounded increases in lead times. All systems are constrained by their resources. To minimize their cost, they tend to operate at high utilization values, resulting in very high variability of lead times. As lead times are a key components in SLA's, it is particularly important to understand the actual values that the system is experiencing.
 
-![Lead Time vs Throughput](assets/lead-time-vs-throughput-report.png)
+![Lead Time vs Throughput](assets/lead-time-vs-throughput-report.png){: width=67%}
 
 This report shows the Lead Time (time between arrival and completion) of jobs when plotted against the throughput in an interval. The Lead Time is computed as the average of all the jobs that complete in the specific interval. Similar reports could be done for the P95 value of the jobs lead times, or other relevant percentiles for SLA evaluation.
 
@@ -156,27 +156,23 @@ While this formula is not useful for predicting the behavior of more complex sys
 
 When using the Utilization instead of the throughput, the limit effect of maximum capacity becomes very easy to see.
 
-![Lead Time vs Utilization](assets/lead-time-vs-utilization-report.png)
+![Lead Time vs Utilization](assets/lead-time-vs-utilization-report.png){: width=67%}
 
 #### Lead Time vs. WIP
 
-The second important insight is tied to the behavior of lead time against the WIP in the system. This is a useful report because the statistical behavior of these two dimensions follows [Little's Law](https://en.wikipedia.org/wiki/Little%27s_law) ($W_t = L\lambda$) for most systems, resulting in a linear relationship between them where the slope estimates to the long running average of the system's throughput. Deviations from this estimate indicate temporary changes to the job arrival rate or service times.
+The second important insight when comparing metrics against each other is the behavior of lead time against the WIP in the system. This is a useful report because the statistical behavior of these two dimensions follows [Little's Law](https://en.wikipedia.org/wiki/Little%27s_law) ($W_t = L\lambda$) for most systems, resulting in a linear relationship between them where the slope estimates to the long running average of the system's throughput. Deviations from this estimate indicate temporary changes to the job arrival rate or service times.
 
-![Lead Time vs WIP](assets/lead-time-vs-wip-report.png)
+![Lead Time vs WIP](assets/lead-time-vs-wip-report.png){: width=67%}
 
-The fitted line is a linear regression. Note that the choice of the curve to fit to the data is driven by a-priori knowledge or assumptions on the behavior of the system (hyperbolic for the previous two, linear for this one). This way deviations from these assumptions can be spotted in the report by ill-fitting curves. Although not provided here, information associated with the report itself should include a measure of the curve fit (e.g. $R^2$) and information to help interpret its shape and meaning. In the example above, the fit is less than perfect, particularly in the lower WIP levels, which may indicate an issue with the simulation being properly "warmed up", showing transient effects in the data.
+Following Little's law, the fitted line is a linear regression. 
+
+Note that the choice of the curve to fit to the data is driven by a-priori knowledge or assumptions on the behavior of the system (hyperbolic for the previous two, linear for this one). This way deviations from these assumptions can be spotted in the report by ill-fitting curves. Although not provided here, information associated with the report itself should include a measure of the curve fit (e.g. $R^2$) and information to help interpret its shape and meaning. In the example above, the fit is less than perfect, particularly in the lower WIP levels, which may indicate an issue with the simulation being properly "warmed up", showing transient effects in the data or other operational anomalies if the data were to represent a real system.
 
 ## Metrics
 
 Metrics provide the values that get presented in the reports. The implementation of a metric results in a collection of numbers or symbols and represents a characteristic of the operation of a system. Metric values are associated with a time interval in which the metric is computed and a point in time which is the end of that interval.
 
 To define a metric, we need to define the calculations to produce its values based on the information available during an interval. For the System model considered above, several metrics are commonly used:
-
-### Yield
-
-Yield metrics are computed based on the Yield measurements for the period, the percentage of failures with respect to all completed jobs, $yield = N(unsuccessful) / N(successful)$
-
-Depending on the volatility of this percentage, Yield can also be computed using a calculation period that covers multiple trailing sampling periods. In this case, multiple yield metrics can be defined attending to the maximum, average, or percentile thresholds. For these more advanced statistics, it is critical to consider the number of sample points available during the calculation period to ensure a representative value.
 
 ### Throughput
 
@@ -186,7 +182,6 @@ The main Throughput Metric for a time interval $(T_s, T_e]$ is commonly represen
 
 $$
 \lambda_i = \frac{1}{T_e(i) - T_s(i)}\sum_{J_i}{V(J_i)}\\
-
 \forall J_i \mid T_s(i) \lt t_c(J_i) \leq T_e(i)
 $$
 
@@ -197,6 +192,12 @@ Throughput metrics are frequently associated with business goals, leading to the
 - Target Throughput (e.g. desired visitors to a commerce web site) to measure some form of business performance or expectations.
 - A high percentile (e.g. p80, p90) of historical throughput to detect trends or changes in the behavior of the system or job arrival.
 - Estimates of the Capacity (maximum expected throughput) of the system to serve as an alert thresholds that resources or an internal processes in the system may become bottlenecks and create problems. Capacity estimates are notoriously unreliable in most dynamic systems so they should be used with care, yet they are critical in safety driven operations like power plants that may have hard safety limits to the throughput (i.e. power output) they can support. These estimates should be informed by an a-priory model of the system to be able to chose the best curve shape to fit the data points to.
+
+### Yield
+
+Yield metrics are computed based on the Yield measurements for the period, the percentage of failures with respect to all completed jobs, $yield = N(unsuccessful) / N(successful)$
+
+Depending on the volatility of this percentage, Yield can also be computed using a calculation period that covers multiple trailing sampling periods. In this case, multiple yield metrics can be defined attending to the maximum, average, or percentile thresholds. For these more advanced statistics, it is critical to consider the number of sample points available during the calculation period to ensure a representative value.
 
 ### Service Times: Wait Time, Lead Time, Processing Time
 
@@ -224,7 +225,7 @@ From their definitions it is obvious that $W_t=\tau+W_w$
 
 ### Work In Progress (WIP)
 
-Work in progress is evaluated at the end of the interval over which the metric is computed. It is a simple count of the number of jobs that have arrived but have not completed yet. In the Operations literature, it is commonly designated as ($L$). Formally, for an interval $I_i=(T_s(i), T_e(i)]$ :
+Work in progress is evaluated at the end of the interval over which the metric is computed. It is a simple count of the number of jobs that have arrived but have not completed yet. In the Operations literature, it is commonly designated as ($L$). Formally, for the interval $I_i=(T_s(i), T_e(i)]$ :
 
 $$
 \begin{array}{}
@@ -239,7 +240,7 @@ Signals and Measurements is where the interface with the real-life system happen
 
 Reactive computer systems, like those supporting websites, enterprise systems, or even control systems deliver value by responding to external inputs with correct information and internal changes to their state (its successful outcomes) or occasionally producing an error due to incorrect inputs or internal conditions (its scrap). Observability of API performance is a very common topic in DevOps practice and can be formulated as a straight forward application of the concepts defined above.
 
-This simplified model can be criticized as not covering information processing in multiple steps or more complex communication topologies, still the core ideas stay applicable and are easily extended to cover those cases.
+This simplified model can be criticized as not covering information processing in multiple steps or more complex communication topologies, yet the core ideas stay applicable and are easily extended to cover those cases.
 
 The metric definitions in the previous section rely on being able to identify Jobs, their arrival, start and complete times and fixing the metric intervals where the metrics themselves are calculated. The basic information for each job can be represented by a table with one row per job and the following values as columns:
 
@@ -247,7 +248,7 @@ The metric definitions in the previous section rely on being able to identify Jo
 - $t_a$: The time when job arrives to the system
 - $t_s$: The time when the job is started to be worked on by the system (resources start being used)
 - $t_c$: The time when the job is complete by the system.
-- Success: A boolean value indicating whether the job completion was successful (an output) or not (scrap)
+- *Success*: A boolean value indicating whether the job completion was successful (an output) or not (scrap)
 - Value $V(J_i)$: If the value of jobs varies from Job to Job and a simple count is not acceptable to use as throughput, each job needs to have a value assigned to it.
 
 Running systems don't produce this neat representation directly. Observability tools usually produce a stream of events as a Job is being processed through the system. These events are the signals that the system emits.
@@ -287,7 +288,7 @@ The distinction between a job `arrival` and a job `start` is frequently ignored 
 
 The determination of *Value* for the job is dependent on the contents of the `details` section and the measurement system will need to perform a domain specific calculation to obtain it.
 
-Resource signals depend a lot of the specifics of the architecture serving the API. Good candidates can be the number of IO operations associated with a job, the number of threads used and the CPU time and the memory consumed. These signals tend to be costly to obtain with the granularity of individual jobs, but can be obtained by sampling the state of the compute resources associated with the API at regular *Sampling Periods* with a record similar to:
+Resource signals depend a lot of the specifics of the architecture serving the API. Good candidates can be the number of IO operations associated with a job, the number of threads used and the CPU time and the memory consumed. These signals tend to be costly to obtain with the granularity of individual jobs, but can be obtained by sampling the state of the compute resources associated with the API at regular *Sampling Periods* using records similar to:
 
 ```json
 {
@@ -303,13 +304,29 @@ Resource signals depend a lot of the specifics of the architecture serving the A
 }
 ```
 
-Showing a sampling period of 5 seconds and a signal of `163 count` threads during that period. The sampling mechanism itself will determine whether this number should be interpreted as the maximum, minimum, average, value at start/end of period, etc.
+Showing a sampling period of 5 seconds and a signal of `163 count` active threads during that period. The sampling mechanism itself will determine whether this number should be interpreted as the maximum, minimum, average, value at start/end of period, etc.
 
 ### Measurements
 
-Measurements are about assigning values to the signals, to remove ambiguity without inventing a new notation, we can simply express the measurements as SQL statements against a table that has the `Id` of the job, `Timestamp`, expressed as milliseconds since the Unix Epoch the `event` as a `VARCHAR` and the details as additional columns. This is just for convenience of notation and implementations may vary depending on technology choices and other optimizations. Popular choices for signal collection and storage are log analysis services like [Splunk](https://www.splunk.com/) or [New Relic](https://newrelic.com/). The natural key of such table would then be `(ID, TIMESTAMP)` as no two events for the same job should be simultaneous.
+Measurements are about assigning values to the signals, to remove ambiguity without inventing a new notation, we will simply express the measurements as SQL statements against a table that has the `Id` of the job, `Timestamp`, expressed as milliseconds since the Unix Epoch the `event` as a `VARCHAR` and the details as additional columns. This is just for convenience of notation. Implementations may vary depending on technology choices and other optimizations. Popular choices for signal collection and storage are log analysis services like [Splunk](https://www.splunk.com/) or [New Relic](https://newrelic.com/). The natural key of such table would then be `(ID, TIMESTAMP)` as no two events for the same job should be simultaneous.
 
 With this convention, the measurements that can be directly obtained from the stream of events:
+
+- *Throughput*
+
+  - Number of Jobs arriving to the system in the period with an interval `[@from, @to)`:
+
+    ```sql
+    select count(1) from api_log
+      where event = 'REQUEST' and timestamp >= @from and timestamp < @to;
+    ```
+
+  - Number of Jobs started processing in the system:
+
+    ```sql
+    select count(1) from api_log
+      where event = 'START' and timestamp >= @from and timestamp < @to;
+    ```
 
 - *Yield*
 
@@ -323,20 +340,6 @@ With this convention, the measurements that can be directly obtained from the st
 
     ```sql
     select count(1) from api_log where event = 'ERROR' and timestamp between @from and @to
-    ```
-
-- *Throughput*
-
-  - Number of Jobs arriving to the system in the period with an interval `[@from, @to)`:
-
-    ```sql
-    select count(1) from api_log where event = 'REQUEST' and timestamp >= @from and timestamp < @to;
-    ```
-
-  - Number of Jobs started processing in the system:
-
-    ```sql
-    select count(1) from api_log where event = 'START' and timestamp >= @from and timestamp < @to;
     ```
 
 - *WIP*
@@ -406,7 +409,7 @@ With this convention, the measurements that can be directly obtained from the st
   where s1.id = s2.id;
   ```
 
-The measurements, as defined, consider only the jobs that have their *end event* recorded during the period and does not restrict when their *begin event* happened, otherwise it would only consider jobs with a maximum duration equal to the sampling period.
+The measurements, as defined, consider only the jobs that have their *complete* event recorded during the period and does not restrict when their *begin event* happened, otherwise it would only consider jobs with a maximum duration equal to the sampling period.
 
 !!! note Effects on time variant processes
     Taking the measurement based on *complete* events gives us the desirable property that the measurement will be *stable*, that is, it will not change when data from new signals become available.On the other hand, this makes the measurement a *lagging* indicator for changes in the signal, potentially for multiple sampling periods if typical processing times are much longer than the sampling period.
@@ -417,7 +420,7 @@ When computing measurements for historical data, the conditions of what jobs to 
 
   To compute the resources consumed, we'll assume an additional table `resource_usage` of signals with the columns `period_end` being a unix Epoch, a `resource_label` to identify the resource being consumed and a decimal `amount` that represents the quantity of the resource consumed in a pre-defined unit of measure specific to the resource label (e.g. thread counts, memory Mbytes, CPU units, ...)
 
-  - Resources (by type, or aggregated through a common attribute like cost) consumed during the sampling period
+  - Resources (by type, or aggregated through a common signal like cost) consumed during the sampling period
 
     ```sql
     select resource_label, period_end, sum(amount)
@@ -453,17 +456,17 @@ Signal
 : An observable phenomenon which can be continuous (e.g. the voltage of a battery) or discrete (e.g. arrivals of jobs to a system for processing). Clearly, signals are constrained by the observation technology available and the nature of the observed phenomenon. This obvious statement is important when designing observability tools and to understand the limitations of the observations. E.g. if a voltmeter is only able to take measurements every second, we'll never be able to properly measure oscillations in the Megahertz range and Measurements and Metrics built on these signals need to know these limitations to avoid mis-representing their results (e.g. a sinusoidal Mhz signal would show basically as zero in this example). More practical examples are that we won't be able to detect traffic surges to a website if we only count requests once an hour and similar situations.
 
 Measurement
-: The act of assigning a number, typically with an associated unit to a Signal associated with a particular moment in time. E.g. Using a voltmeter to read the number of *Volts* in the voltage signal above or counting the number of jobs in the waiting queue in the system. Assigning a single measurement to a signal is necessarily susceptible to inaccuracies and noise from the source of the signal itself, the measurement instrument, environment, etc. and it is important to consider the nature of this noise when designing the metrics that will use the measurement in order to minimize the effect of the expected noise.
+: The act of assigning a number with its unit of measure to a *Signal* at a particular moment in time. E.g. Using a voltmeter to read the number of *Volts* in the voltage signal above or counting the number of jobs in the waiting queue in the system. Assigning a single measurement to a signal is necessarily susceptible to inaccuracies and noise from the source of the signal itself, the measurement instrument, environment, etc. and it is important to consider the nature of this noise when designing the metrics that will use the measurement in order to minimize the effect of the expected noise.
 
 Metric
-: A Calculation based on one or multiple measurements that provides a value (a number or other symbol) that provides information about an Indicator. These calculations can be from an assignment of a color to certain values (Green-Yellow-Red) to sophisticated descriptive statistics of multiple measurements like means, percentiles, standard deviations, etc.
+: A Calculation based on one or multiple measurements that provides a value (a number or other symbol) that informs about the operation of the system. These calculations can vary from a simple assignment of a color to certain values (Green-Yellow-Red) to sophisticated descriptive statistics of multiple measurements like means, percentiles, standard deviations, etc.
 
 Metric Presentation & Evolution
 : The presentation of how a metric changes over time to the end users that need to exercise judgments and actions based on the values of the indicator metrics.
 
 Signals, Measurements and Metrics take place within the passage of time and, although theoretically some could be considered *instantaneous* or *continuous*,in any practical implementation, they all take a duration, or can happen only at particular moments in time. From the discussion above we need to identify the following time periods:
 
-Measurement or Sampling Period
+Measurement Period or Sampling Period
 : The time between two consecutive measurements of the same signal. This needs to be short enough to capture the details we want from the underlying signal. A period of half the time of the smallest expected changes is a widely accepted value based on [Nyquist Theorem](https://en.wikipedia.org/wiki/Nyquist_frequency)
 
 Calculation Period
@@ -475,58 +478,9 @@ Metric Interval
 Reporting Period
 : The length of time for which multiple metric values are displayed together for evaluation. This is the *length* of the $x$ axis in most graphs that show metrics over time.
 
-With these concepts in hand, it is pretty much trivial to define the Measurement Process in simple steps as shown in the diagram:
-*********
+With these concepts in hand, it is pretty much trivial to define a Measurement Process in simple steps that summarize the work presented in this article:
 
-1. The signal is observed during the sampling period and a value is obtained by an instrument or probe as a measurement associated with that time period.
-2. A set of measurements (in general from one or multiple signals) are collected during the calculation period and, at its end, a calculation is performed to obtain the value of the metrics associated with that period.
+1. Signals are observed during the sampling period and a measurement value associated with that time period is obtained by an instrument or probe.
+2. A set of measurements (in general from one or multiple signals) are collected during the calculation period and, at its end, a calculation is performed to obtain the values of metrics associated with that period.
 3. Step #2 is repeated every Metric Interval
-4. At the end of the Reporting Interval or later, all metrics for that period are collected and displayed together for analysis typically in the form of a table or graph.
-
------
-## END-OF-CONTENT
------
-## Other ideas
-
-- SPC
-- Toyota "tails"
-
-
-
-## Application to API or UI response performance
-
-To ground these concepts, it is useful to see how well known observability requirements can be described and implemented.
-
-
-
-#### Resources Consumed
-
-Although the specifics of resource consumption depend a lot on the particular application, all applications share the fact that the maximum throughput of the system is limited by the capacity of its *bottleneck*. A bottleneck is nothing else that the most scarce resource to the system when processing jobs. The *Capacity* of a *bottleneck* resource is the quantity available per time to be used to process jobs.
-
-Based on this Capacity, once translated to the maximum theoretical throughput of the system, we can define the metric of *Utilization* with is simply the Throughput expressed as a fraction of that maximum throughput.
-
-```text
-<<<<<<<<<<<< EDITING BOUNDARY >>>>>>>>>>>>
-```
-
-### Reports
-
-#### Tracking and Trends
-
-- Bar Graphs
-- Line Graphs
-- Stacked Graphs
-
-#### Statistical Process Control
-
-- Regression
-- Min-Max, candle charts
-
-#### Correlation
-
-- X-Y & Scatter Charts
-  - Utilization-Lead Time
-  - WIP-Lead Time
-  - Yield - Throughput
-- Q-Q Charts
-- 
+4. At the end of the Reporting Interval or later, all metrics for that period are collected and displayed together for analysis typically in the form of a table or graph that shows the evolution of those metrics during a reporting period.
