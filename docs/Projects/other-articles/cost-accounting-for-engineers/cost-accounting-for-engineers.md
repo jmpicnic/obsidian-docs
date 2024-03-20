@@ -67,7 +67,7 @@ $$
 
 Looking at it graphically, we have a clear interpretation of the cost variance terms:
 
-![Cost Variance](cost-accounting-for-engineers-assets/cost-variance-graph.png){: width=80%}
+![Cost Variance](./assets/cost-variance-graph.png){: width=80%}
 
 ### The Calculus view
 

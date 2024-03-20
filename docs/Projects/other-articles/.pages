@@ -1,6 +1,6 @@
 nav:
   - Business:
-    - Cost Accounting for Engineers: cost-accounting-for-engineers.md
+    - Cost Accounting for Engineers: cost-accounting-for-engineers/cost-accounting-for-engineers.md
   - Enterprise & Supply Chain:
     - ERPs cannot handle Supply Chains: erps-cannot-handle-supply-chains.md
   - Performance Measurement: performance-measurement

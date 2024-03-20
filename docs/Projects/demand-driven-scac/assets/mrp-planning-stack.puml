@@ -1,0 +1,40 @@
+@startuml (id=MRP_PLANNING_STACK)
+skinparam ranksep 20
+skinparam Shadowing true
+
+'skinparam default
+skinparam ArrowColor #1A9999
+skinparam rectangle {
+  BackgroundColor #D1D1D1
+  FontColor #1A9999
+  BorderColor #FFFFFF
+}
+
+skinparam node {
+    BackgroundColor #D1D1D1
+  FontColor #1A9999
+  BorderColor #FFFFFF
+}
+
+skinparam collections {
+    BackgroundColor #D1D1D1
+  FontColor #1A9999
+  BorderColor #FFFFFF
+}
+collections Orders
+rectangle Forecast
+rectangle Demand
+rectangle RCCP
+rectangle "Batch Selection" as Batch
+rectangle "Schedule\nResources" as Task
+rectangle "Task Planning" as Tasks
+node "Shop Floor\nResources\n(Execution)" as ShopFloor
+
+Orders --> Demand
+Forecast --> Demand
+Demand --> RCCP
+RCCP --> Batch
+Batch --> Task
+Task --> Tasks
+Tasks --> ShopFloor
+@enduml

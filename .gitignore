@@ -12,5 +12,7 @@ scratch/
 **/*.pyc
 **/__pycache__/**
 
+**/.ipynb_checkpoints
+
 # Mac Stuff
 .DS_Store

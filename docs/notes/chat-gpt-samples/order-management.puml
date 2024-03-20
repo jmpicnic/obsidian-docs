@@ -1,0 +1,69 @@
+@startuml
+
+class Order {
+    - orderId: int
+    - customerName: String
+    - orderDate: Date
+    - items: List<OrderItem>
+    - totalAmount: double
+    + addOrderItem(item: OrderItem): void
+    + removeOrderItem(item: OrderItem): void
+    + calculateTotalAmount(): double
+}
+
+class OrderItem {
+    - productId: int
+    - productName: String
+    - quantity: double
+    - unitOfMeasure: UnitOfMeasure
+    - unitPrice: double
+    + calculateItemTotal(): double
+}
+
+class Customer {
+    - customerId: int
+    - name: String
+    - email: String
+    - address: String
+}
+
+class Product {
+    - productId: int
+    - name: String
+    - description: String
+    - price: double
+    - unitOfMeasure: UnitOfMeasure
+    - conversionFactors: Map<UnitOfMeasure, double>
+}
+
+class ProductCatalog {
+    - products: Map<int, Product>
+    + addProduct(product: Product): void
+    + removeProduct(productId: int): void
+    + getProduct(productId: int): Product
+}
+
+class UnitOfMeasure {
+    - unitName: String
+}
+
+class OrderManager {
+    + createOrder(customer: Customer): Order
+    + addItemToOrder(order: Order, productId: int, quantity: double, unitOfMeasure: UnitOfMeasure): void
+    + removeItemFromOrder(order: Order, productId: int): void
+    + calculateOrderTotal(order: Order): double
+    + placeOrder(order: Order): void
+}
+
+Order "1" *-- "*" OrderItem
+Order "1" *-- "1" Customer
+OrderItem "1" -- "1" Product
+OrderItem "1" *-- "1" UnitOfMeasure
+Product "1" *-- "1" UnitOfMeasure
+ProductCatalog ..> Product
+OrderManager ..> Order
+OrderManager ..> OrderItem
+OrderManager ..> Product
+OrderManager ..> ProductCatalog
+
+@enduml

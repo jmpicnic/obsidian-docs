@@ -1,0 +1,25 @@
+# Ideas for Articles/Overall Topics
+
+- The tension between forecasts and plans
+- Push/Pull Systems
+- The Tyranny of Now and the Infinite Shelf
+  - Long Tails, Demographics, Consumer Power, Urbanization, ...
+- AI won't save the supply chain
+  - Unpredictability
+  - What is the promise
+- Robot Swarms in eCommerce
+- SCM is dead, long life to ${SC}^2$
+  - Banana Slide
+- An Architecture for ${SC}^2$
+- Eagle View of SCO
+  - A network
+  - Layered
+  - Bottlenecks
+- The Fog of micro services
+  - Not useful to solve business problems
+  - Need better abstractions
+  - Nobody designs modern IC's gate by gate
+  - The Future of Cloud Systems from an Application POV
+- Defogging production planning
+- When forecasting is useless.
+  - OODA speed is king.
