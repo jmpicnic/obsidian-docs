@@ -1,5 +1,6 @@
 # Ideas for Articles/Overall Topics
 
+- Order and real-time flexibility in ops (Starbucks)
 - The tension between forecasts and plans
 - Push/Pull Systems
 - The Tyranny of Now and the Infinite Shelf

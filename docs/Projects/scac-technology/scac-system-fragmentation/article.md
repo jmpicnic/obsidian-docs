@@ -59,7 +59,7 @@ Traditional systems operate on a top-down *Plan and Command* style with little b
 
 ```plantuml
 scale 300 height
-!include Projects/demand-driven-scac/assets/mrp-planning-stack.puml
+!include Projects/scac-technology/scac-system-fragmentation/assets/mrp-planning-stack.puml
 ```
 
 In *Plan and Command* operation, the first step collects the *Orders* to fulfill and supplements them with additional requirements from a forecast to create an expected Demand. With the sanctioned demand, the system then performs [Rough-Cut Capacity Planning](https://docs.oracle.com/cd/A60725_05/html/comnls/us/crp/rccp.htm) to create a tentative schedule of operations (The [Master Production Schedule](https://en.wikipedia.org/wiki/Master_production_schedule)). From this schedule, the system will select a batch of demand to be released to the floor. Resources are then assigned to the fulfillment of the different orders or their components and concrete tasks are planned for those resources. The result of this planning stack is then released to the shop floor for execution.
