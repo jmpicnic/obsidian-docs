@@ -4,25 +4,10 @@ Copyright: (c) Miguel Pinilla, All rights reserved
 License: "This work is licensed under the Creative Commons License CC BY-NC-SA 4.0: https://creativecommons.org/licenses/by-nc-sa/4.0/"
 email: miguel.pinilla@saldubatech.com
 share: true
-title: The ROI of Supply Chain Technology Projects
+title: Finding the Bang for the Buck: What to Automate
 ---
 
 {{ draftMark }}
-
-## Not your grandfather's ROI
-
-## The Allure of Automation
-
-## Finding the real Drivers
-
-- Cost
-- Revenue
-  - Volume
-  - SLA
-- Yield (inc. Data)
-- X-ilities
-- Compliance
-- And...
 
 ## What processes to automate
 

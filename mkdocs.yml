@@ -58,6 +58,7 @@ plugins:
   - awesome-pages
   - macros
   - meta-descriptions
+  - mkdocs_matplotlib
   - rss:
       match_path: blog/posts/.*
       date_from_meta:
