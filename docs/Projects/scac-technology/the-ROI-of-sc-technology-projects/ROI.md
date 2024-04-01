@@ -106,7 +106,7 @@ Any variability in utilization at those levels will cause big swings in congesti
 
 ### Reducing Variability of fulfillment operations
 
-The curve shown above is drawn for the [M/M/1 Processing queue](https://en.wikipedia.org/wiki/M/M/1_queue) as a simple representative of the overall shape of the utilization/congestion response. A bit more general model, the [G/G/1 Queuer](https://en.wikipedia.org/wiki/G/G/1_queue) can be approximated using [Kingman's Formula](https://en.wikipedia.org/wiki/Kingman%27s_formula):
+The curve shown above is drawn for the [M/M/1 Processing queue](https://en.wikipedia.org/wiki/M/M/1_queue) as a simple representative of the overall shape of the utilization/congestion response. A bit more general model, the [G/G/1 Queue](https://en.wikipedia.org/wiki/G/G/1_queue) can be approximated using [Kingman's Formula](https://en.wikipedia.org/wiki/Kingman%27s_formula):
 
 $$
 QF = \frac{\rho}{1-\rho}\left(\frac{c_a^2+c_s^2}{2}\right)
