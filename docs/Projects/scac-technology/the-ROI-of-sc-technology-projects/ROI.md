@@ -7,8 +7,6 @@ share: true
 title: The ROI of Supply Chain Technology Projects
 ---
 
-{{ draftMark }}
-
 The last 10 years have seen unprecedented investment levels in supply chain and distribution capabilities. Giants in distribution and logistics have poured prodigious amounts of capital to compete in the race to support e-commerce fulfillment. As examples of this effort [Amazon](https://finbox.com/BIT:AMZN/explorer/capex/), [Walmart](https://finbox.com/NYSE:WMT/explorer/capex) and [UPS](https://finbox.com/NYSE:UPS/explorer/capex) alone total around $300 Billion dollars in capital expenditures over the last five years, which although not all of them are dedicated to their supply chain, a substantial portion is.
 
 Customer expectations in e-commerce are summarized in two sound bites that we have used in the past. *The Tyranny of Now* and *The Infinite Shelf* that capture the value that customers put on ever shortening *click-to-door* times and the availability of any product one can ever look for. At the same time, the same customers show little or no tolerance for mis-shipped goods or incomplete deliveries, ready to jump to a competitor at the first sign mis-hap.
@@ -34,9 +32,7 @@ Cost reduction ROI evaluation has been widely taught in business schools and mul
 A complete cost calculation for an operation will take into account variable and fixed operational costs as well as depreciation and capital costs.
 
 $$
-
 C_T = C_v + C_f + C_d + C_c
-
 $$
 
 With the variable cost in turn being an estimate of Unit Cost times the expected volume $C_v = c_u \hat{V}$.
@@ -55,17 +51,13 @@ The result is a non-trivial shift from variable costs to fixed or semi-fixed cos
 When using the generally accepted [Absorption Costing](https://www.investopedia.com/terms/a/absorptioncosting.asp) a *per unit* cost $c_a$ is computed based on the expected volume $\hat{V}$ for the facility or operation:
 
 $$
-
 c_a = \frac{C_f+C_d+C_c}{\hat{V}}
-
 $$
 
 and then reformulating the total cost as:
 
 $$
-
 C_T = (c_u + c_a)\hat{V} +C_{abs}
-
 $$
 
 $C_{abs}$ is the *Absorption Cost*. It is an accounting adjustment to capture the over or under allocation of cost when the actual volume is different than the estimated volume. If the difference is small, this adjustment is not material, but in current supply chains with hard to predict volumes and incidences, the adjustment may be significant. The problem is not the accuracy of the cost, because at the end of the day, a cost is a cost whether you account for it in one place or another, but the timing when this information is made available to decision makers. Variable costs can be collected and reported almost in real-time, but absorption costs are usually only computed at the end of each accounting period, when it is too late to make any adjustments, even if they were technically feasible. Reliance on the Absorption cost adjustment is even more dangerous because any change in volume results in a change in cost inversely proportional to the square of the volume (simple derivatives as described in the [Cost Accounting for Engineers](https://www.linkedin.com/posts/mpinilla_supplychain-automation-roi-activity-7178752650333585408--Dhi) article), making it very sensitive to low volume or high variability operations.
@@ -103,9 +95,7 @@ The third effect is very important, but merits a separate article, which will be
 Congestion and Queuing delays are roughly inversely proportional to the *spare capacity* of a system. That means that lower utilizations result in dramatically smaller congestion delays. This is strictly true for the idealized [M/M/1 Processing queue](https://en.wikipedia.org/wiki/M/M/1_queue). For real systems, it frequently also holds directionally, with different multiplier factors (*K* below), as they tend to have a defined bottleneck point. The delays due to queuing when compared to the *raw* lead time when the system only needs to handle one order (the queuing factor *QF*) is
 
 $$
-
 QF \approx K \frac{\rho}{1 - \rho}
-
 $$
 
 Companies try to operate their facilities at high utilizations, always higher than *80%* utilization to obtain a good return on assets. Utilizations above that threshold result in a very steep section of the congestion or queuing factor curve.
@@ -119,9 +109,7 @@ Any variability in utilization at those levels will cause big swings in congesti
 The curve shown above is drawn for the [M/M/1 Processing queue](https://en.wikipedia.org/wiki/M/M/1_queue) as a simple representative of the overall shape of the utilization/congestion response. A bit more general model, the [G/G/1 Queuer](https://en.wikipedia.org/wiki/G/G/1_queue) can be approximated using [Kingman's Formula](https://en.wikipedia.org/wiki/Kingman%27s_formula):
 
 $$
-
 QF = \frac{\rho}{1-\rho}\left(\frac{c_a^2+c_s^2}{2}\right)
-
 $$
 
 Where $c_a$ and $c_s$ are the variability of order arrival and service (fulfillment) times respectively. The corresponding Congestion/Utilization response curves change with the variability of the fulfillment times:
