@@ -9,15 +9,15 @@ title: The ROI of Supply Chain Technology Projects
 
 {{ draftMark }}
 
-The last 10 years have seen unprecedented investment levels in supply chain and distribution capabilities. Giants in distribution and logistics have poured prodigious amounts of capital to compete in the race to support e-commerce fulfillment. As examples of this effort [Amazon](https://finbox.com/BIT:AMZN/explorer/capex/), [Walmart](https://finbox.com/NYSE:WMT/explorer/capex) and [UPS](https://finbox.com/NYSE:UPS/explorer/capex) alone total around $300 Billion dollars in capital expenditures over the last 5 years, which although not all of them are dedicated to their supply chain, a substantial portion is.
+The last 10 years have seen unprecedented investment levels in supply chain and distribution capabilities. Giants in distribution and logistics have poured prodigious amounts of capital to compete in the race to support e-commerce fulfillment. As examples of this effort [Amazon](https://finbox.com/BIT:AMZN/explorer/capex/), [Walmart](https://finbox.com/NYSE:WMT/explorer/capex) and [UPS](https://finbox.com/NYSE:UPS/explorer/capex) alone total around $300 Billion dollars in capital expenditures over the last five years, which although not all of them are dedicated to their supply chain, a substantial portion is.
 
-Customer expectations in e-commerce can be summarized in two sound bites that we have used in the past. *The Tyranny of Now* and *The Infinite Shelf* reflecting the value that customers put on ever shortening *click-to-door* times and the availability of any product one can ever look for, while at the same time having zero tolerance for mis-shipped goods.
+Customer expectations in e-commerce are summarized in two sound bites that we have used in the past. *The Tyranny of Now* and *The Infinite Shelf* that capture the value that customers put on ever shortening *click-to-door* times and the availability of any product one can ever look for. At the same time, the same customers show little or no tolerance for mis-shipped goods or incomplete deliveries, ready to jump to a competitor at the first sign mis-hap.
 
-The *Tyranny of Now* and *Infinite Shelf* demands from customers affect not only the fulfillment centers as the last stage of distribution chains, but is increasingly felt by upstream nodes in distribution, wholesale and origin facilities as the overall *product-to-market* time shrinks and the variety of products offered by each provider grows.
+Customers' *Tyranny of Now* and *Infinite Shelf* expectations affect not only fulfillment centers as the edge of distribution chains, but are increasingly felt by upstream distribution, wholesale and origin facilities as the overall *product-to-market* time shrinks and the variety of products offered by each provider grows.
 
-This pressure is qualitatively altering the way supply chain operations are designed and measured. Traditionally *Throughput* of a facility and its *Cost per shipped unit* where the main performance metrics for logistics operations. In the new conditions, the metrics to optimize are order lead time and fulfillment accuracy or yield. The ROI calculations were almost exclusively based on reducing the Operational Cost or increasing the volume for a given cost or capital investment (e.g. in buildings). Now the calculation is much more complicated because the returns are derived from estimates of customer retention or satisfaction based on proxy operational metrics of SLA or accuracy.
+The pressure to perform is qualitatively altering the way supply chain operations are designed and measured. *Throughput* of a facility and its *Cost per shipped unit* where traditionally the main performance metrics for logistics operations. In the new conditions, optimization must focus on *order lead time* and *fulfillment accuracy* metrics. The ROI calculations were almost exclusively based on reducing the Operational Cost or increasing the volume for a given cost or capital investment (e.g. in buildings). Now the calculation needs to be much more sophisticated because returns are the driven by customer retention or satisfaction. These are hard to relate to operational practices. The most common operational metrics to use as proxies measure lead time SLA, e.g. the P95 time to ship and yield, e.g. percent of orders with a missing or incorrect item.
 
-For modern logistics nodes the calculation of the return on automation investments varies from case to case and the first step is to decide what business goals the investment is attempting to achieve. These business goals fall into a few broad categories:
+The calculation of the return on automation investments varies from case to case in modern logistics nodes. The first step is to decide what business goals the investment is attempting to achieve which can be classified along a few broad categories:
 
 - Increased Productivity either as cost reduction or as an increase of output for the same facility and cost levels.
 - Increase or protect the revenue stream by increasing the accuracy and speed of shipments, or increasing the variety of products that a facility can handle.
@@ -25,16 +25,18 @@ For modern logistics nodes the calculation of the return on automation investmen
 - Maintain or achieve compliance against industry specific regulations at an acceptable cost (e.g. Pharma, cold-chain, etc.)
 - Some other specific goals that sometimes are not explicitly discussed by decision making executives like reducing dependencies on specific suppliers, service or transportation providers, unions, ...
 
+The last one, although very important and sometimes the overriding deciding factor, is very specific of the industry, jurisdiction and even company considering the investment and necessarily out of the scope of this article. We will dig into the others trying to provide some insight on how to go about evaluating them.
+
 ## Reducing Cost
 
-This category has been widely taught in business schools and multiple books on warehouse or supply chain design, nevertheless it is useful to highlight some points that may be glossed over on a first pass.
-
-A successful investment in automation will reduce operational costs. The investment will also shift the cost structure of the operation and consequently on its risk profile.
+Cost reduction ROI evaluation has been widely taught in business schools and multiple books on warehouse or supply chain design, nevertheless it is useful to highlight some points that may be overlooked on a first pass.
 
 A complete cost calculation for an operation will take into account variable and fixed operational costs as well as depreciation and capital costs.
 
 $$
+
 C_T = C_v + C_f + C_d + C_c
+
 $$
 
 With the variable cost in turn being an estimate of Unit Cost times the expected volume $C_v = c_u \hat{V}$.
@@ -46,27 +48,33 @@ An Automation project will generally:
 3. Add depreciation costs for the investment
 4. Increase the capital cost either through obvious financial cost if debt needs to be used, or the harder to estimate opportunity cost.
 
-The result is a non-trivial shift from variable costs that can be easily adjusted to varying volume requirements (e.g. seasonal, promotions, etc.) to costs that are much more difficult or even impossible to adjust. This problem is compounded by the way cost allocation is usually done, which ends up hiding these effects or at a minimum delaying information to decision makers.
+The result is a non-trivial shift from variable costs to fixed or semi-fixed costs. Variable costs can be easily adjusted to varying volume requirements (e.g. seasonal, promotions, etc.). Fixed costs, with their associated inflexibility increase the operational risk of the facility and the company in the case of lower volumes than expected. ROI calculations should use tools to address uncertainty like scenario planning or Montecarlo simulations to inform decision makers. Simple calculations based on *best estimates* can be very dangerous if they are not qualified by the assumptions made in their inputs.
+
+ This problem is compounded by the way cost allocation is usually done, which ends up hiding these effects or at a minimum delaying information to decision makers as masterfully described in [Relevance Lost](https://www.salduba.info/post/relevance-lost-by-h-thomas-johnson-and-robert-s-kaplan).
 
 When using the generally accepted [Absorption Costing](https://www.investopedia.com/terms/a/absorptioncosting.asp) a *per unit* cost $c_a$ is computed based on the expected volume $\hat{V}$ for the facility or operation:
 
 $$
+
 c_a = \frac{C_f+C_d+C_c}{\hat{V}}
+
 $$
 
 and then reformulating the total cost as:
 
 $$
+
 C_T = (c_u + c_a)\hat{V} +C_{abs}
+
 $$
 
-$C_{abs}$ is the *Absorption Cost*. It is an accounting adjustment to capture the over or under allocation of cost when the actual volume is different than the estimated volume. If the difference is small, this adjustment is not material, but in current supply chains with hard to predict volumes and incidences the adjustment may be significant. The problem is not the accuracy of the cost, because at the end of the day, a cost is a cost whether you account for it in one place or another, but the timing when this information is made available to decision makers. Variable costs can be collected and reported almost in real-time, but absorption costs are usually only computed at the end of each accounting period, when it is too late to make any adjustments, even if they were technically feasible.
+$C_{abs}$ is the *Absorption Cost*. It is an accounting adjustment to capture the over or under allocation of cost when the actual volume is different than the estimated volume. If the difference is small, this adjustment is not material, but in current supply chains with hard to predict volumes and incidences, the adjustment may be significant. The problem is not the accuracy of the cost, because at the end of the day, a cost is a cost whether you account for it in one place or another, but the timing when this information is made available to decision makers. Variable costs can be collected and reported almost in real-time, but absorption costs are usually only computed at the end of each accounting period, when it is too late to make any adjustments, even if they were technically feasible. Reliance on the Absorption cost adjustment is even more dangerous because any change in volume results in a change in cost inversely proportional to the square of the volume (simple derivatives as described in the [Cost Accounting for Engineers](https://www.linkedin.com/posts/mpinilla_supplychain-automation-roi-activity-7178752650333585408--Dhi) article), making it very sensitive to low volume or high variability operations.
 
-Aside from the impact in the cost structure, automation systems also have much harder limits on the possible throughput for a given configuration. Increasing the capacity in manual or low automation situations is a matter of adding shifts or hiring additional operators. In more automated facilities increasing capacity beyond the design limits of the system is very difficult.
+Aside from the direct impact in the cost structure, automation systems also have much harder limits on the possible throughput for a given configuration. Increasing the capacity in manual or low automation situations is frequently just a matter of adding shifts or hiring additional operators with broad latitude on the limits to those changes. In more automated facilities increasing capacity beyond the design limits of the system is very difficult.
 
 When deciding the level of investment, we need to take into account the variable and fixed costs of the proposed solution and what is their maximum throughput. It is convenient to render these considerations visually to gain intuition on the decisions to make.
 
-![Unit Cost Graph](assets/unit-costs.png){: width=67%}
+![Unit Cost Graph](assets/unit-costs.png){: width=75%}
 
 In the figure, the pink like represents the cost profile of a manual or low automation, the green line a medium automation solution and the blue one a hight automation solution. The bands of the corresponding colors signal the throughput ranges where each solution is preferred.
 
@@ -92,7 +100,7 @@ The third effect is very important, but merits a separate article, which will be
 
 ### Increasing Capacity & Productivity
 
-Congestion and Queuing delays are roughly inversely proportional to the *spare capacity* of a system. That means that lower utilizations result in dramatically emallerThis is strictly true for the idealized [M/M/1 Processing queue](https://en.wikipedia.org/wiki/M/M/1_queue), and it holds directionally for real systems as they tend to have a defined bottleneck point. So the delays due to queuing when compared to the *raw* lead time when the system only needs to handle one order (the queuing factor *QF*) is
+Congestion and Queuing delays are roughly inversely proportional to the *spare capacity* of a system. That means that lower utilizations result in dramatically smaller congestion delays. This is strictly true for the idealized [M/M/1 Processing queue](https://en.wikipedia.org/wiki/M/M/1_queue). For real systems, it frequently also holds directionally, with different multiplier factors (*K* below), as they tend to have a defined bottleneck point. The delays due to queuing when compared to the *raw* lead time when the system only needs to handle one order (the queuing factor *QF*) is
 
 $$
 
@@ -100,20 +108,20 @@ QF \approx K \frac{\rho}{1 - \rho}
 
 $$
 
-Which results in a very steep curve at the utilizations that companies usually like to operate facilities (*> 80%*):
+Companies try to operate their facilities at high utilizations, always higher than *80%* utilization to obtain a good return on assets. Utilizations above that threshold result in a very steep section of the congestion or queuing factor curve.
 
 ![Queuing/Congestion Factor](assets/QF.png){: width=67%}
 
-This means that any variability in utilization will cause big swings in congestion delays.
-
-By using automation to increase the capacity of a facility, we move the utilization operating point to the left and reduce the sensitivity.
+Any variability in utilization at those levels will cause big swings in congestion delays. By using automation to increase the capacity of a facility, we may move the utilization operating point to the left and reduce the sensitivity to changes resulting in more manageable queuing delays.
 
 ### Reducing Variability of fulfillment operations
 
 The curve shown above is drawn for the [M/M/1 Processing queue](https://en.wikipedia.org/wiki/M/M/1_queue) as a simple representative of the overall shape of the utilization/congestion response. A bit more general model, the [G/G/1 Queuer](https://en.wikipedia.org/wiki/G/G/1_queue) can be approximated using [Kingman's Formula](https://en.wikipedia.org/wiki/Kingman%27s_formula):
 
 $$
+
 QF = \frac{\rho}{1-\rho}\left(\frac{c_a^2+c_s^2}{2}\right)
+
 $$
 
 Where $c_a$ and $c_s$ are the variability of order arrival and service (fulfillment) times respectively. The corresponding Congestion/Utilization response curves change with the variability of the fulfillment times:
