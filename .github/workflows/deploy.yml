@@ -58,6 +58,12 @@ jobs:
     runs-on: ubuntu-latest
     needs: check-env
     steps:
+      - name: Install pandoc-citeproc
+        id: install-citeproc
+        uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          version: 1.0
+          packages: pandoc-citeproc
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Build Documents
