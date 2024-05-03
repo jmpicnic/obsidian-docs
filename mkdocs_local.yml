@@ -103,6 +103,10 @@ markdown_extensions:
 
 plugins:
   - search
+  - bibtex:
+      bib_file: "bibtex/refs.bib"
+      csl_file: "bibtex/production-and-operations-management.csl"
+      cite_inline: False
   - awesome-pages
   - macros
   - meta-descriptions
