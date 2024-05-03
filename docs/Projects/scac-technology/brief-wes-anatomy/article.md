@@ -7,8 +7,6 @@ share: true
 title: A Bird's eye of Warehouse Execution Systems
 ---
 
-{{ draftMark }}
-
 In the article about the [Fragmentation of Supply Chain Information Systems](../scac-system-fragmentation/article.md) we highlighted the emergence of a new class of systems that combine functionality from WMS's and WCS's under the name of *Warehouse Execution System* but did not give any further details on these systems. WES have a cohesive set of Functionalities and Behaviors that allow to define a generic Functional Reference Model that gives an idea of what their anatomy is. This article is extracted out of Chapter 12 of the book [The Warehouse Revolution](https://www.amazon.com/Warehouse-Revolution-Automate-Terminate/dp/1637425732) recently published.
 
 ## Functionality
