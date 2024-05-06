@@ -1,0 +1,1 @@
+{"rule":"NOUN_AROUND_IT","sentence":"^\\QThe system is built around a core that spans the project end-to-end and act as the guide to build the rest of the system around it.\\E$"}
