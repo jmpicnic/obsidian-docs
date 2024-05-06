@@ -10,7 +10,7 @@
     font-weight: bold;
     opacity: 0.4;
     color:grey;
-    z-index: 99;
+    z-index: 0;
     transform: rotate(-45deg);
   }
 /* } */
