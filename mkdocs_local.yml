@@ -53,6 +53,7 @@ exclude_docs: |
 # Extensions
 # IMPORTANT: KEEP IN SYNC WITH mkdocs.yml EXCEPT THE PLANTUML JAR LOCATION
 markdown_extensions:
+  # https://squidfunk.github.io/mkdocs-material/reference/footnotes/
   - footnotes
   - nl2br
   - attr_list
@@ -103,9 +104,11 @@ markdown_extensions:
 
 plugins:
   - search
+  # https://github.com/shyamd/mkdocs-bibtex
   - bibtex:
       bib_file: "bibtex/refs.bib"
-      csl_file: "bibtex/production-and-operations-management.csl"
+      # csl_file: "bibtex/production-and-operations-management.csl"
+      csl_file: "bibtex/informs-journal-on-computing.csl"
       cite_inline: False
   - awesome-pages
   - macros

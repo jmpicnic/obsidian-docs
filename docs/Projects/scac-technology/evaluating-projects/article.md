@@ -125,7 +125,7 @@ Faced with a scarcity of staff that can perform at the level of sophistication n
 
 ### People & Organization Failures
 
-Despite the label, People failures should not be understood as failures of individuals. These project failures arise when a project does not provide an environment where individuals contribute their efforts effectively. To do this, a project must:
+Despite the label, People failures should not be understood as failures of individuals. Project failures arise when a project does not provide an environment where individuals contribute their efforts effectively. To do this, a project must:
 
 1. Provide an appropriate level of staffing for each task to complete in the agreed time.
 2. Create alignment of goals across teams for all staff members, starting with clearly communicated priorities that can be traced to shared goals of the project.
@@ -133,7 +133,7 @@ Despite the label, People failures should not be understood as failures of indiv
 4. Create an organizational structure that supports the processes chosen for the project, with minimal overhead.
 5. Support the professional development of the staff to improve their engagement and minimize undesirable turn over.
 
-A critical aspect of People and Organization that needs to be given as much attention as any other critical activity is implementing a comprehensive change management plan to educate staff and stakeholders and minimize the negative impacts that the project will have even if completely successful. All projects are undertaken with the goal to effect change in some aspect of an operation. These changes will inevitably result in some changes that are negative to stakeholders. They may result in loss of specific jobs, geographic displacements, obsolescence of certain skills and requirements to acquire new skills. If the project does not address these negative impacts effectively it will face active and passive resistance that could lead to failure with extreme cases resulting even in active sabotage of equipment or willful neglect of maintenance or operating procedures that may result in downtime, or damage to equipment or data.
+A critical aspect of People and Organization that needs to be given as much attention as any other critical activity is implementing a comprehensive change management plan to educate staff and stakeholders and minimize the negative impacts that the project will have even if completely successful. All projects are undertaken with the goal to effect change in some aspect of an operation. Some changes will inevitably have a negative impact for some stakeholders. They may result in loss of specific jobs, geographic displacements, obsolescence of certain skills and requirements to acquire new skills. If the project does not address these negative impacts effectively it will face active and passive resistance that could lead to failure with extreme cases resulting even in active sabotage of equipment or willful neglect of maintenance or operating procedures that may result in downtime, or damage to equipment or data.
 
 ### Process Failures
 
@@ -146,7 +146,7 @@ The are four core areas that the methodology needs to cover to be effective, str
 - Quality Assurance dealing with the verification of both the results of the project and the adherence of the tasks to best practices and project standards.
 - Release Management to clearly identify and manage the deliverables for the project, including labeling, versioning and inventorizing them.
 
-The organization supporting the project needs to be able to implement the chosen methodology. The *Capability and Maturity Model"[@paulkCapabilityMaturityModel1993] offers a useful generic checklist of aspects that an organization needs to consider:
+The organization supporting the project needs to be able to implement the chosen methodology. The *Capability and Maturity Model*[@paulkCapabilityMaturityModel1993] offers a useful generic checklist of aspects that an organization needs to consider:
 
 Activities Performed
 : What are the activities that the project will need to undertake following the chosen methodology. What ceremonies are required, documentation and deliverable prescriptions and the overhead they may introduce. E.g. For Goal definition, it could identify the use of Use Cases or formal specification standards like they exist in electronics board design.
@@ -173,7 +173,7 @@ The preferred approach to this issue is to adopt a fixed cadence for the plannin
 
 This execution cadence must be specific to each organization, but it typically varies between one and four weeks depending on the industry, discipline and available tools.
 
-These short periods are clearly not enough to manage the kind of complex, large projects that Supply Chain systems frequently are. Their internal dependencies, technologically challenging tasks require looking beyond in time. Senior management, financial controls and coordination with suppliers and other external stakeholders (e.g. for training, user acceptance testing, go-live, process changes, etc.) also impose planning horizons longer than 1-4 weeks. The right solution to this requirement is not to extend the basic period or slow down the cadence, but to nest several of these periods in a higher level planning and execution cycle. Higher level cycles will have fewer details and more uncertain estimates beyond the current core period, Explicitly adding the nested structure highlights the need for different details in planning at different levels, allows senior management to interpret the level of uncertainty when presented with a plan and facilitates the refinement of plans to execute the lower levels.
+Short periods are clearly not enough to manage the kind of complex, large projects that Supply Chain systems frequently are. Their internal dependencies, technologically challenging tasks require looking beyond in time. Senior management, financial controls and coordination with suppliers and other external stakeholders (e.g. for training, user acceptance testing, go-live, process changes, etc.) also impose planning horizons longer than 1-4 weeks. The right solution to this requirement is not to extend the basic period or slow down the cadence, but to nest several of these periods in a higher level planning and execution cycle. Higher level cycles will have fewer details and more uncertain estimates beyond the current core period, Explicitly adding the nested structure highlights the need for different details in planning at different levels, allows senior management to interpret the level of uncertainty when presented with a plan and facilitates the refinement of plans to execute the lower levels.
 
 This nesting of planning-execution periods can scale to very large projects and organizations. The R&D portfolio planning for a public global company with more than 30K employees was successfully done with four levels of execution cadences:
 
