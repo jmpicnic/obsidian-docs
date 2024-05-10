@@ -25,6 +25,7 @@
   - Nobody designs modern IC's gate by gate
   - The Future of Cloud Systems from an Application POV
 - Defogging production planning
+- Thin-Thread Project Management
 
 ## Template
 
@@ -34,6 +35,7 @@
   - When forecasting is useless.
   - OODA speed is king.
 - [Push/Pull Systems](../Projects/scac-technology/push-pull/article.md)
+- [irrelevancy of WMS vendors](./irrelevancy-of-wms-vendors.md)
 
 ## Outline
 

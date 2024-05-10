@@ -1,1 +1,2 @@
 {"rule":"NOUN_AROUND_IT","sentence":"^\\QThe system is built around a core that spans the project end-to-end and act as the guide to build the rest of the system around it.\\E$"}
+{"rule":"ADJECTIVE_ADVERB","sentence":"^\\QWhen Uncertainty and Risk are dominant factors in a project, the project should resort to extensive prototyping, either  When uncertainty grows, but the impact of failures can be easily absorbed or corrected, agile or iterative processes are effective at the cost of potential need for re-work (refactoring in software) or backtrack of partial results.\\E$"}
