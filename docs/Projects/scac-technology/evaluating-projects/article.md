@@ -7,8 +7,6 @@ share: true
 title: Is my Supply Chain System Project Healthy?
 ---
 
-{{ draftMark }}
-
 As a manager or executive responsible for any non-trivial Supply Chain system development or implementation project you are guaranteed to go through at least one *doom* episode where the project feels out of control, impossible to understand and hopelessly out of track. Rest assured that if the project could talk, it would tell you *It is not you, it is me*. Large projects are always challenging, and Supply Chain Systems projects are among the most challenging as they sit at the intersection of information, people and physical processes. A combination that very few other projects exhibit.
 
 ## What do Supply Chain Systems Projects Look like?
