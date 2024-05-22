@@ -24,7 +24,7 @@ title: Topic Ideas: Accounting for Engineers Topics
   * Timestamp, Type, Amount ($)
 * Key (non-financial) transactions in business
   * Buy & Sell → Ignore for now, not needed (!!)
-  * Deliver & Receive Goods/Services  (accruing/incurring)
+  * Deliver & Receive Goods/Services (accruing/incurring)
   * Pay & Collect Cash
 * Measurements
   * Balance = set of Net Assets, Deliveries, Receipts at a point in time

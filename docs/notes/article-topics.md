@@ -30,7 +30,6 @@
 ## Template
 
 - Automation ROI: [What to Automate](../Projects/scac-technology/the-ROI-of-sc-technology-projects/what-to-automate.md)
-- Evaluating Projects [Is my Project Healthy?](../Projects/scac-technology/evaluating-projects/article.md)
 - [The tension between forecasts and plans](../Projects/scac-technology/forecast-vs-plans/article.md)
   - When forecasting is useless.
   - OODA speed is king.
@@ -42,4 +41,6 @@
 ## In Progress
 
 ## Done
+
+- Evaluating Projects [Is my Project Healthy?](../Projects/scac-technology/evaluating-projects/article.md)
 

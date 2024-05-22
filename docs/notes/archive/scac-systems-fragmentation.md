@@ -77,7 +77,7 @@ Adoption of technology
 - Cloud systems (ease of interconnection) & Modern API's
 - AI Applications
   - De-noise data
-  - "Upscale" protocols from human materials to machine readable
+  - "Upscale" protocols from human materials to machine-readable
   - Speed of interconnection/integration of systems
 
 ---

@@ -102,7 +102,7 @@ Apart from corporate secrecy, there are non trivial barriers to the development 
 
   Closely related to the Private/Public information challenge is how to assess or guarantee the quality and trustfulness of the data exchanged between nodes. In today's supply chains, even public information like the location of physical assets has contradictory information depending on the data source. The protocols that eventually get adopted need to support ways to assess the reliability of the information exchanged, either through a central trusted authority or using distributed systems like blockchain.
 
-The widespread accessibility and acceptance of cloud systems, micro-service architectures, integrated real-time automation modules for distribution nodes like those provided by [Autostore](https://www.autostoresystem.com/) and more flexible interfaces, sometimes powered by AI models that are able to interpret human-centric documents are opening the way to enable this interconnectivity and the evolution of legacy systems to integrate in this interconnected world.
+The widespread accessibility and acceptance of cloud systems, microservices architectures, integrated real-time automation modules for distribution nodes like those provided by [Autostore](https://www.autostoresystem.com/) and more flexible interfaces, sometimes powered by AI models that are able to interpret human-centric documents are opening the way to enable this interconnectivity and the evolution of legacy systems to integrate in this interconnected world.
 
 ## Conclusion
 
