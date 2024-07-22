@@ -9,4 +9,5 @@ title: Assets Index
 
 
 ![Manhattan Associates Revenue and Income](manhattan_sales.png)
-![Statista e-commerce US Revenue](statista-us-ecomm-revenue.png)
+![Statista e-commerce US Revenue](statista-us-retail-sales.png)
+![Statista wms market](statista-wms-market.png)

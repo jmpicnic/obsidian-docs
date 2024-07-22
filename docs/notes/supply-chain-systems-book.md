@@ -44,7 +44,7 @@ Why, ISO layers, ...
 - Logistics Functions: Nodes, Links
 - Network
 - Industry
- 
+
 ## 5. The Science of Supply Chains
 
 - Resource Allocation
@@ -99,8 +99,5 @@ Why, ISO layers, ...
 - Dimensions:
   - Vertical Integration/Specialists
   - Asset Intensive/Asset Light
-  
+
 ## 11. Wrap-up
-
-
-

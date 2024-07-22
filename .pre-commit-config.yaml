@@ -1,0 +1,28 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+# See https://mitelman.engineering/blog/python-best-practice/automating-python-best-practices-for-a-new-project
+default_language_version:
+  python: python3.11
+#exclude: ^(ib_src|.idea|data)/
+
+repos:
+  -   repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v4.5.0
+      hooks:
+        -   id: check-yaml
+        -   id: check-json
+        # -   id: check-toml
+        -   id: check-merge-conflict
+        # -   id: debug-statements
+        -   id: end-of-file-fixer
+        -   id: trailing-whitespace
+  # -   repo: https://github.com/PyCQA/flake8
+  #     rev: 7.0.0
+  #     hooks:
+  #       -   id: flake8
+  - repo: local
+    hooks:
+      - id: mkbuild
+        name: Build the markdown documentation, run with '$ mkdocs serve' at http://127.0.0.1:8000/
+        entry: bash -c 'mkdocs build --strict -f mkdocs_local.yml'
+        language: system

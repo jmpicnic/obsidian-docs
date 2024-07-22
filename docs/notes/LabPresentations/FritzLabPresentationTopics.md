@@ -1,0 +1,153 @@
+# Topic Ideas for Fritz's lab meetings
+
+## Supply Chain/Warehouse Automation
+
+- Overview of current operations in warehouses
+  - Functional Areas
+  - Types of Operations
+  - Available Automation Technologies
+  - State of the Industry
+- The "Practical Science" of Supply Chains
+  - The "Problem" to solve
+    - Optimize: Cost, Time, Investment, ...
+    - Subject to: Resource Availability
+    - In an environment with:
+      - High Uncertainty
+      - Data noise
+      - Incomplete information
+  - The big categories
+    - Resource Allocation
+    - Operations Planning
+    - Task Scheduling
+    - Observation, Measurement
+  - The tools available
+    - Queuing Theory
+    - Optimization Models
+    - Graph/Flow
+    - Market Equilibrium Models
+- Queuing
+- Measurement
+- The Demand/Fulfillment Model
+  - Nodes
+  - Routes
+  - Brokers
+- Enterprise/Supply Chain Planning & Information Systems
+  - What is "Performance" for Supply Chain Operations
+    - Impact of Modern e-commerce
+    - MRP approach
+    - Pull Systems
+  - Challenges for Information Systems
+    - Fragmentation
+    - Commercial and Data Challenges
+  - Trends and Technologies
+    - Clouds
+    - IoT
+    - AI
+- E-commerce operations: From Click to Door
+  - Storefront, Carts, Checkout, Payment
+  - Scope of Operations: Inventory at Rest to Delivery
+  - Inventory and Order Dispatching
+    - Predictive Inventory Positioning
+    - Drop-ship
+  - Order Preparation
+    - Picking
+    - Packing
+    - Shipping
+  - Delivery
+    - Parcel Networks
+    - Last Mile
+- Robotics in Material Handling
+  - Non-Robot automation
+  - Unconventional robots
+  - AMR's (Autonomous Mobile Robots)
+  - Human-Robot Collaboration
+  - Use Cases
+    - Order Picking
+    - Movement and Routing
+- The Information Structure of Supply Chains
+  - Complexity of trade operations
+    - From Origin to Consumer, the [journey of a t-shirt](https://www.slideshare.net/slideshow/supply-chain-101-journey-of-a-tshirt/36800988)
+  - 5 Layers of functionality: Assets, Movement, Operations, Transactions, Business
+  - 5 Scopes of control: Sensor/Actuator, Machine, Cell, Facility, Supply Chain
+
+## Engineering Processes/R&D in Industry
+
+- Acceleration of Product Cycles
+  - Traditional Plan-Execute-Test
+  - What changes
+    - The impact of uncertainty
+      - "Irreversible Decisions"
+      - Organizational response time
+    - The need for organizational learning
+  - Go-To-Market Speed
+    - The OODA Loop
+    - Cadences
+    - Communication
+    - Agile Methodologies
+      - Outside of Software
+- Product Development Organizations
+  - Roles in Product Development
+    - Why: The needs that justify the investment
+    - What: The product to build, technologies to use, ...
+    - How: The activities to perform
+    - When: The timeline and resources to use
+  - Organizational Structures
+    - Functional Departments
+    - Project/Business/Division Organizations
+      - Toyota
+    - Matrix
+    - Networks
+  - Integration in Corporate Processes
+    - Planning & Budgeting
+    - The Talent Market
+- Beyond Products
+  - Product Portfolios
+  - Technology Platforms
+  - Role of "Research" in R&D
+
+## Software Technologies
+
+- The evolution of "Software Products"
+  - OS Centered Systems
+  - The emergence of SaaS
+  - Clouds, Browsers and Phones
+  - Federated Systems
+- The essentials of modern software systems
+  - Multi-layer systems: DB, Backend, Frontend, CDN
+  - De-facto Distribution: API's, Services
+  - Cross-Cutting aspects: Identity, Security, Observability, Provisioning
+  - AI
+- Careers in Software
+  - The "Y"
+  - Disciplines
+    - Design
+      - Product Definition
+      - User Experience
+      - Specialist SMEs
+      - Architecture
+    - Development
+      - BackEnd
+      - FrontEnd
+    - Testing & Deployment
+      - QA
+      - Operations
+    - Enablement
+      - Program Management
+      - DevOps
+      - Training
+  - Levels
+    - Early Career
+      - Engineer
+      - Sr. Engineer
+    - IC
+      - Staff
+      - Architect
+      - Principal/Fellow
+    - Management
+      - Team Leader
+      - Manager (Team of Teams)
+      - Director
+      - VP
+      - CTO
+      - CIO
+

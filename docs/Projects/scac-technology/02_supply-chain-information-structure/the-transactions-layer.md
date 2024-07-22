@@ -38,7 +38,7 @@ title
 = Order Entity
 end title
 
-!include Projects/scac-technology/supply-chain-information-structure/assets/transaction-classes.puml
+!include Projects/scac-technology/02_supply-chain-information-structure/assets/transaction-classes.puml
 remove Allocation
 remove UnitOfMeasure
 
@@ -68,7 +68,7 @@ title
 = Support Pre Allocation of goods
 end title
 
-!include Projects/scac-technology/supply-chain-information-structure/assets/transaction-classes.puml
+'!include Projects/scac-technology/02_supply-chain-information-structure/assets/transaction-classes.puml
 'remove Fulfillment
 remove Order
 remove Party

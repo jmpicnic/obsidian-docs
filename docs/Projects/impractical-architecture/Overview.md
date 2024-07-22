@@ -14,46 +14,46 @@ Domain Driven Development relies on the assumption that focusing and leveraging 
 
 Proponents of Domain Driven Design justify this claim noting that the structured knowledge captured in a domain:
 
-1.  Is the result of thorough refinement and testing over time by a whole community of practitioners and therefore a good baseline to  describe the behaviors and functions of a product.
+1. Is the result of thorough refinement and testing over time by a whole community of practitioners and therefore a good baseline to  describe the behaviors and functions of a product.
 
-2.  Have been already adapted and used in many variants in the domain,  giving confidence that they represent the essence of the domain  while retaining enough flexibility to be applied to real world use  cases.
+2. Have been already adapted and used in many variants in the domain,  giving confidence that they represent the essence of the domain  while retaining enough flexibility to be applied to real world use  cases.
 
-3.  They are shared by real-life practitioners, in some cases even with formal training available (again the accounting example). Making the communication between the domain experts and the technologists/engineers that will design and realize the product easier.
+3. They are shared by real-life practitioners, in some cases even with formal training available (again the accounting example). Making the communication between the domain experts and the technologists/engineers that will design and realize the product easier.
 
-4.  A consequence of their extended use and refinement, particularly in mature domains, the concepts and procedures are very stable and slow to change, providing a strong foundation for a system that will be resilient to change.
+4. A consequence of their extended use and refinement, particularly in mature domains, the concepts and procedures are very stable and slow to change, providing a strong foundation for a system that will be resilient to change.
 
 ## What does DDD contribute to Product Engineering
 
 Product Engineering, despite the emergence of more powerful tools, including AI, is the product of human intellectual activities. It consists of creating and organizing information that machines (e.g. compilers) or other humans will use. Regardless of whether it follows agile, iterative or more traditional waterfall processes, product engineering needs to produce and organize information that describes:
 
-1.  The specific definition of the need that the product will fulfill or the value that it will deliver.
+1. The specific definition of the need that the product will fulfill or the value that it will deliver.
 
-2.  What product's behaviors, information content and interactions with its users and the environment will lead to the fulfillment of the need or creation of the value.
+2. What product's behaviors, information content and interactions with its users and the environment will lead to the fulfillment of the need or creation of the value.
 
-3.  What components will need to be built to perform those behaviors, manage information and enable interactions.
+3. What components will need to be built to perform those behaviors, manage information and enable interactions.
 
-4.  How the components will interact with each other in a cohesive way.
+4. How the components will interact with each other in a cohesive way.
 
-5.  The selection and configuration of technologies and tools that will be used in the construction of the components.
+5. The selection and configuration of technologies and tools that will be used in the construction of the components.
 
-6.  Instructions for how to construct, assemble and, if appropriate, operate the components and the resulting product to actually realize the desired value.
+6. Instructions for how to construct, assemble and, if appropriate, operate the components and the resulting product to actually realize the desired value.
 
 This information is very rarely defined once and for all, as no product is ever complete or perfect. Improvements, extensions and changes constantly appear as a result of a changing environment or the continuous learning that successful product organizations exhibit.
 
-For any real-life product, multiple people or teams work together to create this information. Furthermore, different areas require specialized knowledge and skills from different staff members. A well structured and well understood Domain provides a shared workspace for these different specialists to effectively communicate and collaborate.
+For any real-life product, multiple people or teams work together to create this information. Furthermore, different areas require specialized knowledge and skills from different staff members. A well-structured and well understood Domain provides a shared workspace for these different specialists to effectively communicate and collaborate.
 
-A common misunderstanding of Agile methodologies results in a blanket rejection of upfront design and even specifications. We believe that this is just that, a misconception. The points above don't imply either creating large and heavy requirements, specifications and design documents nor spending protracted periods of valuable project time in requirements or design "phases" The demand these points make on an engineering team is more fundamental. A team must thoroughly understand what they set out to build, what it is supposed to accomplish and what "raw materials"(tools, systems, ... they have available. Without a deep understanding of these elements, any engineering effort will be doomed to failure. The specifics of when is this understanding achieved and what tools (documents, whiteboards, etc... are used depends on the size and culture of the team, the characteristics of the product and the methodologies used, but the underlying, fundamental need for understanding is not negotiable for any successful engineering team.
+A common misunderstanding of Agile methodologies results in a blanket rejection of upfront design and even specifications. We believe that this is just that, a misconception. The points above imply neither creating large and heavy requirements, specifications and design documents nor spending protracted periods of valuable project time in requirements or design "phases" The demand these points make on an engineering team is more fundamental. A team must thoroughly understand what they set out to build, what it is supposed to accomplish and what "raw materials"(tools, systems, ... they have available. Without a deep understanding of these elements, any engineering effort will be doomed to failure. The specifics of when is this understanding achieved and what tools (documents, whiteboards, etc... are used depends on the size and culture of the team, the characteristics of the product and the methodologies used, but the underlying, fundamental need for understanding is not negotiable for any successful engineering team.
 
 ## DDD Conceptual Toolbox
 
 DDD is sometimes reduced to the definition and implementation of "Entities"that represent domain concepts, usually by means of Class or ER models. As described above, a Domain defines a set of concepts that are the basis of these models, but it also includes conventions and procedures that all practitioners use, going beyond what traditional Class or ER models represent. Traditional tools of software engineering can be applied to DDD, together supporting the activities above.
 
--   Business Process Engineering
--   Persona Definition
--   Use Cases
--   Information Models
--   Scenarios & Interactions
--   Information Transformations, Algorithms and Domain Specific Languages
+- Business Process Engineering
+- Persona Definition
+- Use Cases
+- Information Models
+- Scenarios & Interactions
+- Information Transformations, Algorithms and Domain Specific Languages
 
 Each of these tools or methodologies have countless books, articles and blog posts that do a much better job than what could be done here. Wikipedia is always a good starting point to look for them.
 
@@ -93,17 +93,19 @@ To describe "How"a product is realized, it is important to consider two very dif
 
 Architecture is focused on decomposing the product in smaller components. Components can then be worked on semi-independently and later put back together to realize the final product. The Architecture of complex systems needs to be described from different viewpoints. For mechanical products, the different perspectives may be mechanical strength, kinetic analysis of moving parts, thermal analysis, spatial packaging, etc...For software systems, there are many different methodology proposals. At the end, they can be seen as variations of an underlying set of concerns to address:
 
--   **Context**: What is the boundary of the product and how it will interact with its environment and stakeholders.
+![System Design Concerns](assets/components-of-systems-architecture.drawio.png)
 
--   **Functional**: The decomposition of the product in discrete, self-contained components and how the different functions/activities that the product needs to perform are allocated or partitioned to different components.
+- **Context**: What is the boundary of the product and how it will interact with its environment and stakeholders.
 
--   **Information Model**: What does the system keep as its internal state during and between activities and the structure of this state in smaller, well defined data structures.
+- **Functional**: The decomposition of the product in discrete, self-contained components and how the different functions/activities that the product needs to perform are allocated or partitioned to different components.
 
--   **Runtime**: Once the technologies are chosen, what specific computing, networking, I/O and storage elements the product will use when in operation.
+- **Information Model**: What does the system keep as its internal state during and between activities and the structure of this state in smaller, well defined data structures.
 
--   **Artifacts**: How sources and intermediate artifacts will be produced by the engineering team, how they will be structured and managed.
+- **Runtime**: Once the technologies are chosen, what specific computing, networking, I/O and storage elements the product will use when in operation.
 
--   **Operation, Administration & Maintenance**: The mechanisms, tools, processes and documentation (e.g. Runbooks) that allow the product itself to operate and perform its functions, including configuration, observation, security, cost and fault management.
+- **Artifacts**: How sources and intermediate artifacts will be produced by the engineering team, how they will be structured and managed.
+
+- **Operation, Administration & Maintenance**: The mechanisms, tools, processes and documentation (e.g. Runbooks) that allow the product itself to operate and perform its functions, including configuration, observation, security, cost and fault management.
 
 Domain Driven Design, with its emphasis on domain concepts and modeling, defacto gives primacy to the Information Model over other aspects. When deciding to use DDD for a product it is important to be aware of this built-in bias of the methodology to avoid costly mistakes.
 
@@ -124,6 +126,15 @@ The selection of specific technologies and the architectural design of a system 
 ## Stopping here
 
 This article has grown to about ten pages and has yet, it may feel incomplete because it does not get to the core of DDD techniques or even provide recommendations and methodologies. Still, I want to keep it to a reasonable size and hope it is helpful enough on its own and to set the context for other articles to follow on how to go about defining architectures and selecting technologies.
+
+### Acknowledgements
+
+Acknowledgements
+This article uses some images available in their source web sites, in particular:
+
+- [C4 Model](https://c4model.com) for [https://static.structurizr.com/workspace/76748/diagrams/Containers.png](https://static.structurizr.com/workspace/76748/diagrams/Containers.png)
+- [AWS Architecture Diagrams](https://docs.aws.amazon.com/architecture-diagrams/latest/location-services-with-machine-learning-forecasting/location-services-with-machine-learning-forecasting.html?did=wp_card&trk=wp_card) for [https://docs.aws.amazon.com/images/architecture-diagrams/latest/location-services-with-machine-learning-forecasting/images/1-sample-web-application.png](https://docs.aws.amazon.com/images/architecture-diagrams/latest/location-services-with-machine-learning-forecasting/images/1-sample-web-application.png)
+- [Grafana](https://grafana.com/grafana/) for [https://grafana.com/media/products/cloud/grafana/grafana-dashboard-english.png?w=900](https://grafana.com/media/products/cloud/grafana/grafana-dashboard-english.png?w=900)
 
 **Summary of Artifacts**
 
