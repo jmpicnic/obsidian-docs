@@ -9,7 +9,7 @@ title: The Fragmentation of Supply Chain Information Systems
 
 The *Supply Chain Management* expression hides a dizzying number of business processes, disciplines, technologies, tools and skills ranging from hard-engineering disciplines like real time control systems, robotics, etc.. to core business functions like procurement or sourcing that are at the intersection of the physical and information worlds. Supply chains, by their very nature, always involve multiple independent parties working together. Suppliers, Providers, Carriers, Insurers, Brokers, etc... all need to coordinate to make supply chains work. The information systems that support all these activities also reflect all this complexity with an overwhelming alphabet soup of systems like WCS, WMS, TMS, SCM, ERP, ...
 
-A way to organize this is to look at Supply Chain activities based on the [*Functionality* they manage](../supply-chain-information-structure/Overview.md) and at the *Scope* they cover, from single devices (sensors, actuators) to complete supply chains. The levels of functionality to consider are:
+A way to organize this is to look at Supply Chain activities based on the [*Functionality* they manage](../02_supply-chain-information-structure/Overview.md) and at the *Scope* they cover, from single devices (sensors, actuators) to complete supply chains. The levels of functionality to consider are:
 
 - **Equipment**: The physical resources that support Supply Chain Activities
 - **Movement**: The isolated actions performed by machines or operators
@@ -88,7 +88,7 @@ All local controllers and the order management system receive information on the
 
 This local controller approach has the advantage to be adaptable to control a single machine or group of operators in a warehouse as well as scale up to complete supply chains where the *nodes* and resources are distribution centers or warehouses.
 
-The technology and architecture of the systems needed to support this shift in paradigm are very different that what is currently available from vendors. In contrast to the fragmentation shown in the figure above, we foresee an evolution of the industry towards horizontal layers following the  [Information Structure of Supply Chains](../supply-chain-information-structure/Overview.md). Some of this evolution is already happening with the emergence of Warehouse Execution Systems (WES) that cover the movement and operations layers across complete facilities, displacing legacy WCS and WMS in the process.
+The technology and architecture of the systems needed to support this shift in paradigm are very different that what is currently available from vendors. In contrast to the fragmentation shown in the figure above, we foresee an evolution of the industry towards horizontal layers following the  [Information Structure of Supply Chains](../02_supply-chain-information-structure/Overview.md). Some of this evolution is already happening with the emergence of Warehouse Execution Systems (WES) that cover the movement and operations layers across complete facilities, displacing legacy WCS and WMS in the process.
 
 ![WES Scope](assets/landscape_wes.drawio.svg){width=75%}
 
